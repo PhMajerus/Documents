@@ -43,6 +43,11 @@ For example:
  • ]8;;https://github.com/microsoft/cascadia-code/Microsoft Cascadia]8;; 2404.23
  • ]8;;https://github.com/be5invis/Iosevka/Iosevka]8;; 29.0.0
 
+This document explains how large type pieces work if you want to understand
+the details and be able to customize the look of your large text.
+But to make them easier to use, I also created a FIGlet font with over 1000
+pre-built large characters, named ]8;;https://github.com/PhMajerus/FIGfontsphm-largetype]8;;.
+
 
 𜸚𜸟𜸤𜸚𜸟𜸤𜸝𜸢𜸜𜸝𜸢𜸜𜸛𜸟𜸥𜸚𜸟𜸤𜸞𜸠𜸥𜸜𜸝𜸢𜸜𜸚𜸟𜸤  𜸛𜸟𜸤𜸜𜸛𜸟𜸥𜸚𜸟𜸤𜸛𜸟𜸥𜸚𜸟𜸤
 𜸩  𜸩 𜸩𜸩𜸫𜸹𜸩𜸫𜸹𜸨𜸟 𜸩   𜸩 𜸩𜸩𜸫𜸹𜸩 𜸧  𜸨𜸟𜹃𜸩𜸨𜸟 𜸩  𜸨𜸟 𜸾𜸟𜸤
@@ -287,5 +292,5 @@ Note that Unicode does not include the character orginally provided by the
 key '8', but it can safely be replaced by 2:[100m𜸫[49m as they are almost identical.
 
 
-[2;3m]8;;http://www.phm.lu/Philippe Majerus]8;;, January-February 2024, last updated April 23, 2024[22;23m
+[2;3m]8;;http://www.phm.lu/Philippe Majerus]8;;, January-February 2024, last updated April 29, 2024[22;23m
 
