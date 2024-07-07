@@ -10,14 +10,16 @@ TBWTC: ( B!"#$%&'()*+[38;5;179m,[39m-[38;5;179m.[39m/[38;5;74m0123456789[
                   [38;5;179m^,^ [38;5;74m[Base  16]       [B.16][38;5;98m[Base 8][38;5;79m[B4][38;5;169m01[38;5;185mFT  [38;5;167m^[38;5;179m^      [38;5;74m[B.16][38;5;98m[Base 8][38;5;79m[B4][38;5;169m01[38;5;185mFT[38;5;170m\ /[38;5;179m^[39m
                    [38;5;179m`Decimal separator        [38;5;59m[Right-align.] [38;5;167mNot´[38;5;179m`Repeating   [38;5;59m[Left-aligned][38;5;170mShift[38;5;179m`Rep.[39m
 
-[38;5;74mBase 16 (hexadecimal) :[39m  ( B0123456789ABCDEF(B  (or ( B0123456789abcdef(B for left-aligned, identical glyphs)
-[38;5;98mBase 8  (octal)       :[39m  ( BGHIJKLMN(B          (or ( Bg h i j k l m n(B  for left-aligned)
-[38;5;79mBase 4  (quaternary)  :[39m  ( BOPQR(B              (or ( Bo   p   q   r(B    for left-aligned)
-[38;5;169mBase 2  (binary)      :[39m  ( BST(B                (or ( Bs       t(B        for left-aligned)
-[38;5;185mFalse and True tacks  :[39m  ( BUV(B
-Signs and separators  :  ( B+-(B [2m(signs)[22m ( B.(B [2m(decimal sep.)[22m ( BZ(B [2m(start of repeating seq.)[22m ( B_(B [2m(grouping sep.)[22m
-Operators             :  ( B#%*+-/\^~=WXYwxy(B
-Parenthesis           :  ( B() [] {} <>(B
-Other                 :  ( B"'` :; !$&?@|(B
+[38;5;74mBase 16 (hexadecimal):[39m  ( B0123456789ABCDEF(B  (or ( B0123456789abcdef(B for left-aligned, identical glyphs)
+[38;5;98mBase 8  (octal)      :[39m  ( BGHIJKLMN(B          (or ( Bg h i j k l m n(B  for left-aligned)
+[38;5;79mBase 4  (quaternary) :[39m  ( BOPQR(B              (or ( Bo   p   q   r(B    for left-aligned)
+[38;5;169mBase 2  (binary)     :[39m  ( BST(B                (or ( Bs       t(B        for left-aligned)
+[38;5;185mFalse and True tacks :[39m  ( BUV(B
+Signs and separators :  ( B+-(B [2m(signs)[22m ( B.(B [2m(decimal sep.)[22m ( BZ(B [2m(start of repeating seq.)[22m ( B_(B [2m(grouping sep.)[22m
+Operators            :  ( B#%*+-/\^~=WXYwxy(B
+Parenthesis          :  ( B() [] {} <>(B
+Other                :  ( B"'` :; !$&?@|(B
 
-Sources :  [3mthe best way to count[23m by Lucilla - ]8;;https://www.youtube.com/watch?v=rDDaEVcwIJMVideo on YouTube]8;; - ]8;;https://github.com/lucitone/thebestwaytocountPaper on GitHub]8;;
+Sources:  [3mthe best way to count[23m by Lucilla - ]8;;https://www.youtube.com/watch?v=rDDaEVcwIJMVideo on YouTube]8;; - ]8;;https://github.com/lucitone/thebestwaytocountPaper on GitHub]8;;
+VT220 raster softfont design by ]8;;https://www.phm.lu/Philippe Majerus]8;;
+

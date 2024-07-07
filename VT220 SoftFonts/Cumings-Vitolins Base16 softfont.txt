@@ -12,4 +12,6 @@ HexNum: ( H!"#$%&'()*+,-./[91m0123456789[m:;<=>?[92m@ABCDEFGHIJKLMNO[93mPQ
 
 Base conversion example: Base-16 ( H@ABCDEFGHIJKLMNOP(B = Base-10 ( H81985529216486895Q(B
 
-Sources : MacKenzie Cumings & Valdis Vītoliņš - ]8;;https://arxiv.org/pdf/1707.03751New Symbols for Base-16 and Base-256 Numerals]8;;
+Source: MacKenzie Cumings & Valdis Vītoliņš - ]8;;https://arxiv.org/pdf/1707.03751New Symbols for Base-16 and Base-256 Numerals]8;;
+VT220 raster softfont design by ]8;;https://www.phm.lu/Philippe Majerus]8;;
+
