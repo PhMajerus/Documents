@@ -10,6 +10,6 @@ SFont: ( C!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcde
 #6[38;5;147m( CREADY.(B
 #6[6m█[25;39m
 
-Original raster font design by Commodore
+Original raster font design by Commodore for their Commodore 64 computer
 VT220 raster softfont by ]8;;https://www.phm.lu/Philippe Majerus]8;;
 
