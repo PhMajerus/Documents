@@ -9,5 +9,5 @@ ASCII: !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghi
 SFont: ( W!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~(B
 
 Original Cascadia font design by ]8;;https://www.sajatypeworks.com/Aaron Bell]8;;, Microsoft / Saja Typeworks
-Waterfowlia Raster font design and VT320 softfont by ]8;;https://www.phm.lu/Philippe Majerus]8;;
+Waterfowlia Raster fonts design and VT320 softfont by ]8;;https://www.phm.lu/Philippe Majerus]8;;
 
