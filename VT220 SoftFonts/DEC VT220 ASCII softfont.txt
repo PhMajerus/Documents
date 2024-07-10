@@ -7,6 +7,8 @@ This file loads the original VT220 ASCII charset as a software font and displays
 ASCII: !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
 VT220: ( D!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~(B
 
+Example: ( DThe quick brown fox jumps over the lazy dog.(B
+
 Original raster font design by Digital Equipment Corporation for their VT220 terminals
 VT220 raster softfont by ]8;;https://www.phm.lu/Philippe Majerus]8;;
 

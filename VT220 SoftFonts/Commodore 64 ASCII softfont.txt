@@ -7,6 +7,9 @@ This file loads the Commodore 64-based ASCII charset as a software font and disp
 ASCII: !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
 SFont: ( C!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~(B
 
+Example: ( CThe quick brown fox jumps over the lazy dog.(B
+         ( CTHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.(B
+
 #6[38;5;147m( CREADY.(B
 #6[6m█[25;39m
 

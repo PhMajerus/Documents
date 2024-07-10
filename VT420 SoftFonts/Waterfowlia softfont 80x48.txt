@@ -10,6 +10,8 @@ You can select the font using echo -e "\e( W" and return to the standard font us
 ASCII: !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
 SFont: ( W!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~(B
 
+Example: ( WThe quick brown fox jumps over the lazy dog.(B
+
 Original Cascadia font design by ]8;;https://www.sajatypeworks.com/Aaron Bell]8;;, Microsoft / Saja Typeworks
 Waterfowlia Raster fonts design and VT420 80×48 softfont by ]8;;https://www.phm.lu/Philippe Majerus]8;;
 
