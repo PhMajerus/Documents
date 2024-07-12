@@ -5,7 +5,8 @@
 This file loads my Large Type Pieces for VT420 softfont, a raster font
 compatible with HP 2640 Series terminals Large Character Set and Unicode
 U+1CE1A to U+1CE50 characters. This version provides the 10×10 glyphs version
-for VT420 in 80×36 display mode.
+for VT420 in 80×36 display mode. When used on a VT420 terminal, send serveral
+resolutions of the font if you want to support several of the 6 display modes.
 
 ASCII: !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_
 SFont: ( L!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_(B
