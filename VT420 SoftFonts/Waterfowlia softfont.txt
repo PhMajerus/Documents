@@ -5,11 +5,10 @@
 This file loads my Waterfowlia VT420 softfont, a raster font inspired by
 ]8;;https://github.com/microsoft/cascadia-codeMicrosoft® Cascadia™]8;;, and displays it below for comparison.
 See the file source to see how to use it.
-This version currently only includes the 10×16 glyphs version for VT420 in
-80×24 display mode. When used on a VT420 terminal, send serveral resolutions
-of the font if you want to support several of the 6 display modes.
-You can select the font using echo -e "\e( W" and return to the standard font
-using echo -e "\e(B".
+This version only includes the 10×16 glyphs version for VT420 in 80×24 display
+mode. When used on a VT420 terminal, send serveral resolutions of the font if
+you want to support several of the 6 display modes. You can select the font
+using echo -e "\e( W" and return to the standard font using echo -e "\e(B".
 
 ASCII: !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
 SFont: ( W!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~(B
