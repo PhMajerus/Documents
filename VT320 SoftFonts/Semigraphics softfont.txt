@@ -7,9 +7,9 @@ shadings, half-blocks, quadrants (PC), sextants (TRS-80), smooth mosaics
 (diagonals), and semicircles characters. Only half of the patterns are
 provided, the other half must be generated using reverse video / negative.
 
-ASCII: !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
-SFont: ( M!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~(B
-       [2m  [Quad.][  Sextants                  ][  Smooth mosaics    ][Ctr][ Circles  ][ Triangles    ][m
+ASCII: !"[92m#$%&'()[96m*+,-./0123456789:;<=>?@ABCDEFG[95mHIJKLMNOPQRSTUVWXYZ[\][92m^_`ab[93mcdefghijklmn[91mopqrstuvwxyz{|}[m~
+SFont: ( M!"[92m#$%&'()[96m*+,-./0123456789:;<=>?@ABCDEFG[95mHIJKLMNOPQRSTUVWXYZ[\][92m^_`ab[93mcdefghijklmn[91mopqrstuvwxyz{|}[m~(B
+         [92m[Quad.][96m[  Sextants                  ][95m[  Smooth mosaics    ][92m[Ctr][93m[ Circles  ][91m[  Triangles  ][m
 
 [4mQuadrants[24;2m (1/4 2x2)               [0;4mCentered[m    [4mCircles[m                   [4mShades[m
 ( M[44m [m [44m%[m [44m&[m [44m#[m [44m'[m [44m$[m [44;7m)[m [44;7m([m [44m([m [44m)[m [44;7m$[m [44;7m'[m [44;7m#[m [44;7m&[m [44;7m%[m [44;7m [m   [44m^[m [44ma[m [44m_[m [44m`[m [41mb[m   [44mc[m [44md[m [44me[m [44mf[m [41mh[m [41mi[m [41mg[m [41mj[m [44mm[m [44mk[m [44ml[m [44mn[m   [41m![m [41m"[m [41;7m![m(B
