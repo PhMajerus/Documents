@@ -7,7 +7,7 @@ It uses the same kana order as Shift-JIS half-width katakana, followed by
 extras usually only available as full-width katakana in Unicode.
 
 ASCII: !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
-VT220: ( K!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~(B
+SFont: ( K!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~(B
 
 KATAKANA ( K6@6E(B SYLLABARY:
   -kstnhmyrw.  -kstnhmyrw.  marks
