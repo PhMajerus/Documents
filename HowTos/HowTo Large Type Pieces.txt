@@ -47,6 +47,8 @@ This document explains how large type pieces work if you want to understand
 the details and be able to customize the look of your large text.
 But to make them easier to use, I also created a FIGlet font with over 1000
 pre-built large characters, named ]8;;https://github.com/PhMajerus/FIGfontsphm-largetype]8;;.
+If you only need a single-screen reference to copy characters from, see ]8;;https://github.com/PhMajerus/Documents/blob/main/CheatSheets/Large%20Type%20Pieces.txtmy
+Large Type Pieces cheat sheet]8;;.
 
 
 𜸚𜸟𜸤𜸚𜸟𜸤𜸝𜸢𜸜𜸝𜸢𜸜𜸛𜸟𜸥𜸚𜸟𜸤𜸞𜸠𜸥𜸜𜸝𜸢𜸜𜸚𜸟𜸤  𜸛𜸟𜸤𜸜𜸛𜸟𜸥𜸚𜸟𜸤𜸛𜸟𜸥𜸚𜸟𜸤
@@ -147,7 +149,7 @@ These diagonal pieces make it possible to create proper diagonal lines:
  [2m│𜸨[22m𜸯𜸸[2m│ │𜸩𜸼𜸩│𜸩[22m𜸰[2m𜸩│𜸩[22m𜸫𜸻[2m𜸩│ │𜸩[22m𜸫𜸹[2m│ │𜸩 𜸩│ │𜸩𜸜𜸩│𜸩[22m𜸱[2m𜸩│𜸩[22m𜸬𜸢[2m𜸩│ │[22m𜸪𜸲𜸸[2m│ │[22m𜸫𜸳𜸻[2m│ │[22m𜸬𜸴𜸻[2m│ │[22m 𜸵𜸻[2m│[22m 𜸵𜸻[2m│[22m
  [2m│𜸼 𜸼│ │𜸼 𜸼│𜸼 𜸼│𜸼  𜸼│ │𜸼 𜸼│ │[22m𜸫𜹁𜸻[2m│ │[22m𜸿𜹂𜹆[2m│[22m𜸿𜹂𜹆[2m│[22m𜸿𜸻𜸫𜹆[2m│ │𜸼 𜸼│ │ 𜸼 │ │𜸽𜸟𜹄│ │ 𜸼 │ 𜹊 │[22m
  [2m└───┘ └───┴───┴────┘ └───┘ └───┘ └───┴───┴────┘ └───┘ └───┘ └───┘ └───┴───┘[22m
-(beware of tiny piece at bottom of cusp of M and at the top of the cusp of W)
+(beware of tiny pieces at bottom and top of the cusps of M and W repectively)
 
 Finally, a special bottom right rounded corner [100m𜹃[49m with an extra diagonal line
 that provides the extra stem for the Q is a special character just for that:
@@ -292,5 +294,5 @@ Note that Unicode does not include the character orginally provided by the
 key '8', but it can safely be replaced by 2:[100m𜸫[49m as they are almost identical.
 
 
-[2;3m]8;;http://www.phm.lu/Philippe Majerus]8;;, January-February 2024, last updated April 29, 2024[22;23m
+[2;3m]8;;http://www.phm.lu/Philippe Majerus]8;;, January-February 2024, last updated February 14, 2024[22;23m
 
