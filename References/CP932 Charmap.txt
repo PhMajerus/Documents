@@ -70,9 +70,9 @@ F|
 6|Я
 7|а б в г д е ё ж з и й к л м н 
 8|о п р с т у ф х ц ч ш щ ъ ы ь э 
-9|ю я                           ─
+9|ю я                           ─ 
 A|│ ┌ ┐ ┘ └ ├ ┬ ┤ ┴ ┼ ━ ┃ ┏ ┓ ┛ ┗ 
-B|┣ ┳ ┫ ┻ ╋ ┠ ┯ ┨ ┷ ┿ ┝ ┰ ┥ ┸ ╂   
+B|┣ ┳ ┫ ┻ ╋ ┠ ┯ ┨ ┷ ┿ ┝ ┰ ┥ ┸ ╂ 
 C|
 D|
 E|
@@ -83,7 +83,7 @@ F|
 4|① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ 
 5|⑰ ⑱ ⑲ ⑳ Ⅰ Ⅱ Ⅲ Ⅳ Ⅴ Ⅵ Ⅶ Ⅷ Ⅸ Ⅹ 　㍉
 6|㌔㌢㍍㌘㌧㌃㌶㍑㍗㌍㌦㌣㌫㍊㌻㎜
-7|㎝㎞㎎㎏㏄㎡　　　　　　　　㍻　
+7|㎝㎞㎎㎏㏄㎡　　　　　　　　㍻
 8|〝〟№ ㏍℡ ㊤㊥㊦㊧㊨㈱㈲㈹㍾㍽㍼
 9|≒ ≡ ∫ ∮ ∑ √ ⊥ ∠ ∟ ⊿ ∵ ∩ ∪ 
 
@@ -675,3 +675,4 @@ FC - IBM extension (from DOS/V)
 
 
 Also, 0xF040 - 0xF9FC are EUDC (End-User Defined Characters) and map to Unicode PUA characters.
+Microsoft or IBM also hid some half-width box drawings, arrows, and extras in C0 (0x00 to 0x1F).
