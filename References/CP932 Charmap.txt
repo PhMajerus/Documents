@@ -7,7 +7,7 @@ Single-byte (JIS X 0201)
 2| !"#$%&'()*+,-./
 3|0123456789:;<=>?
 4|@ABCDEFGHIJKLMNO
-5|PQRSTUVWXYZ[\]^_
+5|PQRSTUVWXYZ[¥]^_
 6|`abcdefghijklmno
 7|pqrstuvwxyz{|}~
 A| ｡｢｣､･ｦｧｨｩｪｫｬｭｮｯ
