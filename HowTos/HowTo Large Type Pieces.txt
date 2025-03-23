@@ -41,7 +41,9 @@ The only requirement is to use a font that includes those characters.
 To display properly, you need a font with support for large type pieces.
 For example:
  • ]8;;https://github.com/microsoft/cascadia-code/Microsoft Cascadia]8;; 2404.23
+ • ]8;;https://github.com/slavfox/Cozette/Cozette]8;; 1.27.0
  • ]8;;https://github.com/be5invis/Iosevka/Iosevka]8;; 29.0.0
+ • ]8;;https://unifoundry.com/unifont/Unifont]8;; 16.0.01 (requires Unifont Upper)
 
 This document explains how large type pieces work if you want to understand
 the details and be able to customize the look of your large text.
@@ -294,5 +296,5 @@ Note that Unicode does not include the character orginally provided by the
 key '8', but it can safely be replaced by 2:[100m𜸫[49m as they are almost identical.
 
 
-[2;3m]8;;http://www.phm.lu/Philippe Majerus]8;;, January-February 2024, last updated February 14, 2024[22;23m
+[2;3m]8;;http://www.phm.lu/Philippe Majerus]8;;, January-February 2024, last updated March 13, 2025[22;23m
 
