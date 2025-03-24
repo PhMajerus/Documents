@@ -5,8 +5,38 @@
                                                     𜴱𜴬      𜴣𜴧𜴗         
 #6 The tumultuous journey to Unicode
 
+This document contains legacy computers character sets, those will display
+properly only if you use a font that contains the complete Symbols for Legacy
+Computing and Supplement blocks from Unicode 16.0.
 
-Commodore PETSCII (Commodore PET, C=64, …), Based on early ASCII
+This document does not cover BCDIC and EBCDIC because while significant, they
+did not evolve into modern Unicode. ASCII on the other hand is included as it
+as the beginning of Latin-1, which in turn is included as it as the beginning
+of Unicode, and also influenced UTF-8 design.
+
+The first ASCII standard from 1963 only included uppercase letters and left
+28 codes unassigned.
+
+ [4mASCII 1963 (7-bit)[24m
+  [33m_0123456789ABCDEF[m
+ [33m0_[90m␀␁␂␃␄␅•␇␈␉␊␋␌␍␎␏[m
+ [33m1_[90m␐␑␒␓␔␕␖␙••••␜␝␞␟[m
+ [33m2_[90m␠[m!"#$%&'()*+,-./
+ [33m3_[m0123456789:;<=>?
+ [33m4_[m@ABCDEFGHIJKLMNO
+ [33m5_[mPQRSTUVWXYZ[\]↑←
+ [33m6_[90m␥␥␥␥␥␥␥␥␥␥␥␥␥␥␥␥[m
+ [33m7_[90m␥␥␥␥␥␥␥␥␥␥␥␥␆•␛␡[m
+␥ = Unassigned
+• = Control character with no modern equivalent (RU, S0 to S3, and ① )
+
+Many early computers didn't have enough RAM to provide a graphics mode where
+individual pixels could be controlled. They were limited to displaying text.
+Since most early home computers were 8-bit systems, their designers quickly
+realized they could add an extra 128 characters from 0x80 to 0xFF to provide
+international alphabets and semigraphics, allowing for rudimentary graphics.
+
+For example, the Commodore PETSCII (PET, C=64, …), based on ASCII 1963:
 
  [4mPETSCII (standard)[24m    [4mPETSCII (shifted)[24m
   [33m_0123456789ABCDEF     _0123456789ABCDEF[m
@@ -18,63 +48,170 @@ Commodore PETSCII (Commodore PET, C=64, …), Based on early ASCII
  [33m5_[mPQRSTUVWXYZ[£]↑←    [33m5_[mpqrstuvwxyz[90m[£]↑←[m
  [33m6_[m🭹♠🭲🭸🭷🭶🭺🭱🭴╮╰╯🭼╲╱🭽    [33m6_[90m🭹[mABCDEFGHIJKLMNO
  [33m7_[m🭾●🭻♥🭰╭╳○♣🭵♦┼🮌│π◥    [33m7_[mPQRSTUVWXYZ[90m┼🮌│[m🮖🮘
- [90;3mIn PETSCII, 80 to 9F are repeats of 00 to 1F.[m
+ [33m8_[100;30;3mRepeat of 00-1F [m    [33m8_[100;30;3mRepeat of 00-1F [m
+ [33m9_[100;30;3m control chars  [m    [33m9_[100;30;3m control chars  [m
  [33mA_[m ▌▄▔▁▏🮕▕🮏◤🮇├▗└┐▂    [33mA_[90m ▌▄▔▁▏🮕▕🮏[m🮙[90m🮇├▗└┐▂[m
  [33mB_[m┌┴┬┤▎▍🮈🮂🮃▃🭿▖▝┘▘▚    [33mB_[90m┌┴┬┤▎▍🮈🮂🮃▃[m✓[90m▖▝┘▘▚[m
  [90;3mC0 to DF are repeats of 40 to 5F, and E0 to FF are repeats of A0 to BF.[m
 
+The committee in charge of ASCII quickly decided that lowercase letters were
+important to include as well, and deprecated some control characters and
+moved the remaining ones into the 0x00 to 0x1F range, now referred to as C0
+control characters, to leave the 0x60 to 0x7F available for a lowercase copy
+of the 0x40 to 0x5F range. This made it easy to change from uppercase to
+lowercase or the other way around with a single bit change, and perform
+case-insensitive comparisons by ignoring (masking out) one bit.
+While this was only officially published as the standard in 1967, the
+decision and draft came very soon after publishing the 1963 standard, so
+many early computers integrated the changes or part of them quickly.
 
- [4mASCII (7-bit)[24m         [4mIBM PC graphical characters[24m
+ [4mASCII 1967 (7-bit)[24m
+  [33m_0123456789ABCDEF[m
+ [33m0_[90m␀␁␂␃␄␅␆␇␈␉␊␋␌␍␎␏[m
+ [33m1_[90m␐␑␒␓␔␕␖␗␘␙␚␛␜␝␞␟[m
+ [33m2_[90m␠[m!"#$%&'()*+,-./
+ [33m3_[m0123456789:;<=>?
+ [33m4_[m@ABCDEFGHIJKLMNO
+ [33m5_[mPQRSTUVWXYZ[\]^_
+ [33m6_[m`abcdefghijklmno
+ [33m7_[mpqrstuvwxyz{|}~[90m␡[m
+
+The Apple II for example decided to base its characters set on this revision,
+providing ^ and _ instead of ↑ and ←. But to save ROM space, they only
+included the original uppercase glyphs, making the sequence repeat with
+different visual effects while only storing 32 8×8 glyphs (256 bytes).
+
+ [4mApple II[24m
+  [33m_0123456789ABCDEF[m
+ [33m0_[0;7m@ABCDEFGHIJKLMNO[m  ← Inverse
+ [33m1_[0;7mPQRSTUVWXYZ[\]^_[m    (reversed video/negative)
+ [33m2_[0;7m␠!"#$%&'()*+,-./[m
+ [33m3_[0;7m0123456789:;<=>?[m
+ [33m4_[39;47m@ABCDEFGHIJKLMNO[m  ← Blinking (alternating inverse)
+ [33m5_[39;47mPQRSTUVWXYZ[\]^_[m    (changed to MouseText in Apple IIc and
+ [33m6_[39;47m␠!"#$%&'()*+,-./[m    IIGS, and Enhanced Apple IIe upgrade.)
+ [33m7_[39;47m0123456789:;<=>?[m
+ [33m8_[m@ABCDEFGHIJKLMNO  ← Normal
+ [33m9_[mPQRSTUVWXYZ[\]^_
+ [33mA_[m␠!"#$%&'()*+,-./
+ [33mB_[m0123456789:;<=>?
+ [33mC_[37m@ABCDEFGHIJKLMNO[m  ← Repeat of normal
+ [33mD_[37mPQRSTUVWXYZ[\]^_[m
+ [33mE_[37m␠!"#$%&'()*+,-./[m
+ [33mF_[37m0123456789:;<=>?[m
+
+This means it was not really compatible with ASCII, as the 0x20 to 0x3F rows
+originally assigned to punctuation and digits would be their inverse
+versions, the uppercase letters 0x40 to 0x5F would be their blinking
+versions, and the lowercase letters 0x60 to 0x7F would be the blinking
+punctuation and digits instead.
+This is part of a "based on ASCII but not quite ASCII" rough start
+developers on early systems encountered.
+
+Some manufacturers also realized they could add glyphs to the C0 control
+characters. They would be interpreted as in-band control when printed or
+transmitted, but if that value was stored in video memory for a character of
+the text screen, it would render as semigraphics, providing 16 more glyphs.
+
+ [4mTRS-80[24m                [4mMattel Aquarius[24m
   [33m_0123456789ABCDEF     _0123456789ABCDEF[m
- [33m0_[90m␀␁␂␃␄␅␆␇␈␉␊␋␌␍␎␏    [33m0_[m ☺☻♥♦♣♠•◘○◙♂♀♪♫☼
- [33m1_[90m␐␑␒␓␔␕␖␗␘␙␚␛␜␝␞␟    [33m1_[m►◄↕‼¶§▬↨↑↓→←∟↔▲▼
- [33m2_[90m␠[m!"#$%&'()*+,-./    [33m2_[90m !"#$%&'()*+,-./[m
- [33m3_[m0123456789:;<=>?    [33m3_[90m0123456789:;<=>?[m
- [33m4_[m@ABCDEFGHIJKLMNO    [33m4_[90m@ABCDEFGHIJKLMNO[m
- [33m5_[mPQRSTUVWXYZ[\]^_    [33m5_[90mPQRSTUVWXYZ[\]^_[m
- [33m6_[m`abcdefghijklmno    [33m6_[90m`abcdefghijklmno[m
- [33m7_[mpqrstuvwxyz{|}~[90m␡    [33m7_[m[90mpqrstuvwxyz{[m¦[90m}~[m⌂
+ [33m0_[m␨£|éÜÅ¬öØùñ`āŔÄÃ    [33m0_[m£½¼¾÷©→←↑↓↗↙↘↖𜷰𜷱
+ [33m1_[mÑÖØÕßüõæäàȧ∮ÉÆÇ˜    [33m1_[m𜷲𜷳𜷴𜷦𜷧𜷨𜷩𜷪𜷫𜷵▗▝▖▘▚▄
+ [33m2_[90m␠!"#$%&'()*+,-./    [33m2_[90m␠!"#$%&'()*+,-./[m
+ [33m3_[90m0123456789:;<=>?    [33m3_[90m0123456789:;<=>?[m
+ [33m4_[90m@ABCDEFGHIJKLMNO    [33m4_[90m@ABCDEFGHIJKLMNO[m
+ [33m5_[90mPQRSTUVWXYZ[\]^_    [33m5_[90mPQRSTUVWXYZ[\]^_[m
+ [33m6_[90m`abcdefghijklmno    [33m6_[90m`abcdefghijklmno[m
+ [33m7_[90mpqrstuvwxyz{¦}~[m±    [33m7_[90mpqrstuvwxyz{¦}~␡[m
+ [33m8_[m 🬀🬁🬂🬃🬄🬅🬆🬇🬈🬉🬊🬋🬌🬍🬎    [33m8_[m▇▏𜷬𜷭🮏🮌▒●▂▆🛧𜷸𜷮𜷯▶▲
+ [33m9_[m🬏🬐🬑🬒🬓▌🬔🬕🬖🬗🬘🬙🬚🬛🬜🬝    [33m9_[m▁▉𜷶𜷷🮎🮍⬤▎▍▌✈𜷹𜷼𜷻◀▼
+ [33mA_[m🬞🬟🬠🬡🬢🬣🬤🬥🬦🬧▐🬨🬩🬪🬫🬬    [33mA_[m 🬀🬁🬂🬃🬄🬅🬆🬇🬈🬉🬊🬋🬌🬍🬎
+ [33mB_[m🬭🬮🬯🬰🬱🬲🬳🬴🬵🬶🬷🬸🬹🬺🬻█    [33mB_[m🬏🬐🬑🬒🬓▌🬔🬕🬖🬗🬘🬙🬚🬛🬜🬝
+ [33mC_[m♠♥♦♣☺☹≤≥αβγδεζηθ    [33mC_[m◢◣🯨▊▪♦·🯬┼🯭╱🯩┴├┐└
+ [33mD_[mικλμνξοπρστυφχψω    [33mD_[m𜷿𜷾🯪𜷽♥♣│🯮╳🯯╲🯫┬┤┌┘
+ [33mE_[mΩ√÷∑≈∆⌇≠🗲%⍾∞✓§🯋©    [33mE_[m🬞🬟🬠🬡🬢🬣🬤🬥🬦🬧▐🬨🬩🬪🬫🬬
+ [33mF_[m¤¶¢®🯁🯂🯃℞℅♂♀🯌🯄🯅🯉🯊    [33mF_[m🬭🬮🬯🬰🬱🬲🬳🬴🬵🬶🬷🬸🬹🬺🬻█
 
-  [90;3mThe original IBM PC includes characters for values used for in-band control
-  codes (C0), and originally had a broken bar in place of the vertical bar.[m
- 
- [4mDOS 437: IBM-PC/US[24m    [4mDOS 850: Latin 1[24m      [4mWin 1252: Latin 1[24m
-  [33m_0123456789ABCDEF     _0123456789ABCDEF     _0123456789ABCDEF[m
- [33m8_[mÇüéâäàåçêëèïîìÄÅ    [33m8_[90mÇüéâäàåçêëèïîìÄÅ    [33m8_[m€[100;30m␥[m‚ƒ„…†‡ˆ‰Š‹Œ[100;30m␥[mŽ[100;30m␥[m
- [33m9_[mÉæÆôöòûùÿÖÜ¢£¥₧ƒ    [33m9_[90mÉæÆôöòûùÿÖÜ[mø[90m£[mØ×[90mƒ    [33m9_[100;30m␥[m‘’“”•–—˜™š›œ[100;30m␥[mžŸ
- [33mA_[máíóúñÑªº¿⌐¬½¼¡«»    [33mA_[90máíóúñÑªº¿[m®[90m¬½¼¡«»    [33mA_[m ¡¢£¤¥¦§¨©ª«¬­®¯
- [33mB_[m░▒▓│┤╡╢╖╕╣║╗╝╜╛┐    [33mB_[90m░▒▓│┤[mÁÂÀ©[90m╣║╗╝[m¢¥[90m┐    [33mB_[m°±²³´µ¶·¸¹º»¼½¾¿
- [33mC_[m└┴┬├─┼╞╟╚╔╩╦╠═╬╧    [33mC_[90m└┴┬├─┼[mãÃ[90m╚╔╩╦╠═╬[m¤    [33mC_[mÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏ
- [33mD_[m╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀    [33mD_[mðÐÊËÈıÍÎÏ[90m┘┌█▄[m¦Ì[90m▀    [33mD_[mÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞß
- [33mE_[mαßΓπΣσµτΦΘΩδ∞φε∩    [33mE_[mÓ[90mß[mÔÒõÕ[90mµ[mþÞÚÛÙýÝ¯´    [33mE_[màáâãäåæçèéêëìíîï
- [33mF_[m≡±≥≤⌠⌡÷≈°∙·√ⁿ²■     [33mF_[m­[90m±[m‗¾¶§[90m÷[m¸[90m°[m¨[90m·[m¹³[90m²■     [33mF_[mðñòóôõö÷øùúûüýþÿ
+These two systems also introduce another idea to compensate for the lack of a
+graphics mode. A set of characters provide a low-resolution set of 2×2 or 2×3
+pseudo-pixels patterns, making it possible to create crude arbitrary graphics.
 
-  [90;3mThe DOS 858 codepage is identical to 850 except for D5 [23mı[3m replaced by [23m€[3m.[m
+When IBM introduced the IBM 5150 Personal Computer in 1981, they decided to
+follow the trend by using ASCII and adding extra characters both in 0x80 to
+0xFF and C0 (0x00 to 0x1F). However, being "Business Machines", they focused
+on supporting extra alphabets (for other languages and math), and
+semigraphics to draw tables, because businesses need products inventories and
+tabular data more than game sprites and tiles.
+
+ [4mIBM PC[24m
+  [33m_0123456789ABCDEF[m
+ [33m0_[m ☺☻♥♦♣♠•◘○◙♂♀♪♫☼
+ [33m1_[m►◄↕‼¶§▬↨↑↓→←∟↔▲▼
+ [33m2_[90m !"#$%&'()*+,-./[m
+ [33m3_[90m0123456789:;<=>?[m
+ [33m4_[90m@ABCDEFGHIJKLMNO[m
+ [33m5_[90mPQRSTUVWXYZ[\]^_[m
+ [33m6_[90m`abcdefghijklmno[m
+ [33m7_[m[90mpqrstuvwxyz{[m¦[90m}~[m⌂
+
+While the top half was identical in all markets, the original US-centric
+extras designed for the US didn't support other western countries. It was
+redesigned for each target market and lost some box drawing pieces to allow
+for more alphabetic letters to accomodate specific regions and languages.
+
+ [4mDOS 437: IBM-PC/US[24m    [4mDOS 850: Latin 1[24m
+  [33m_0123456789ABCDEF     _0123456789ABCDEF[m
+ [33m8_[mÇüéâäàåçêëèïîìÄÅ    [33m8_[90mÇüéâäàåçêëèïîìÄÅ[m
+ [33m9_[mÉæÆôöòûùÿÖÜ¢£¥₧ƒ    [33m9_[90mÉæÆôöòûùÿÖÜ[mø[90m£[mØ×[90mƒ[m
+ [33mA_[máíóúñÑªº¿⌐¬½¼¡«»    [33mA_[90máíóúñÑªº¿[m®[90m¬½¼¡«»[m
+ [33mB_[m░▒▓│┤╡╢╖╕╣║╗╝╜╛┐    [33mB_[90m░▒▓│┤[mÁÂÀ©[90m╣║╗╝[m¢¥[90m┐[m
+ [33mC_[m└┴┬├─┼╞╟╚╔╩╦╠═╬╧    [33mC_[90m└┴┬├─┼[mãÃ[90m╚╔╩╦╠═╬[m¤
+ [33mD_[m╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀    [33mD_[mðÐÊËÈıÍÎÏ[90m┘┌█▄[m¦Ì[90m▀[m
+ [33mE_[mαßΓπΣσµτΦΘΩδ∞φε∩    [33mE_[mÓ[90mß[mÔÒõÕ[90mµ[mþÞÚÛÙýÝ¯´
+ [33mF_[m≡±≥≤⌠⌡÷≈°∙·√ⁿ²■     [33mF_[m­[90m±[m‗¾¶§[90m÷[m¸[90m°[m¨[90m·[m¹³[90m²■[m
 
  [4mDOS 860: Portuguese[24m   [4mDOS 863: fr-Canada[24m    [4mDOS 865: Nordic[24m
   [33m_0123456789ABCDEF     _0123456789ABCDEF     _0123456789ABCDEF[m
- [33m8_[90mÇüéâ[mã[90mà[mÁ[90mçê[mÊ[90mè[mÍÔ[90mì[mÃÂ    [33m8_[90mÇüéâ[mÂ[90mà[m¶[90mçêëèïî[m‗À§    [33m8_[90mÇüéâäàåçêëèïîìÄÅ
- [33m9_[90mÉ[mÀÈ[90mô[mõ[90mò[mÚ[90mù[mÌÕ[90mÜ¢£[mÙ[90m₧[mÓ    [33m9_[90mÉ[mÈÊ[90mô[mËÏ[90mûù[m¤Ô[90mÜ¢£[mÙÛ[90mƒ    [33m9_[90mÉæÆôöòûùÿÖÜ[mø[90m£[mØ[90m₧ƒ
+ [33m8_[90mÇüéâ[mã[90mà[mÁ[90mçê[mÊ[90mè[mÍÔ[90mì[mÃÂ    [33m8_[90mÇüéâ[mÂ[90mà[m¶[90mçêëèïî[m‗À§    [33m8_[90mÇüéâäàåçêëèïîìÄÅ[m
+ [33m9_[90mÉ[mÀÈ[90mô[mõ[90mò[mÚ[90mù[mÌÕ[90mÜ¢£[mÙ[90m₧[mÓ    [33m9_[90mÉ[mÈÊ[90mô[mËÏ[90mûù[m¤Ô[90mÜ¢£[mÙÛ[90mƒ    [33m9_[90mÉæÆôöòûùÿÖÜ[mø[90m£[mØ[90m₧ƒ[m
  [33mA_[90máíóúñÑªº¿[mÒ[90m¬½¼¡«»    [33mA_[m¦´[90móú[m¨¸³¯Î[90m⌐¬½¼[m¾[90m«»    [33mA_[90máíóúñÑªº¿⌐¬½¼¡«[m¤
- [33mB_[90m░▒▓│┤╡╢╖╕╣║╗╝╜╛┐    [33mB_[90m░▒▓│┤╡╢╖╕╣║╗╝╜╛┐    [33mB_[90m░▒▓│┤╡╢╖╕╣║╗╝╜╛┐
- [33mC_[90m└┴┬├─┼╞╟╚╔╩╦╠═╬╧    [33mC_[90m└┴┬├─┼╞╟╚╔╩╦╠═╬╧    [33mC_[90m└┴┬├─┼╞╟╚╔╩╦╠═╬╧
- [33mD_[90m╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀    [33mD_[90m╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀    [33mD_[90m╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀
- [33mE_[90mαßΓπΣσµτΦΘΩδ∞φε∩    [33mE_[90mαßΓπΣσµτΦΘΩδ∞φε∩    [33mE_[90mαßΓπΣσµτΦΘΩδ∞φε∩
- [33mF_[90m≡±≥≤⌠⌡÷≈°∙·√ⁿ²■     [33mF_[90m≡±≥≤⌠⌡÷≈°∙·√ⁿ²■     [33mF_[90m≡±≥≤⌠⌡÷≈°∙·√ⁿ²■ 
-[m
- [4mDOS 720: Arabic[24m       [4mDOS 932: Japanese[24m
+ [33mB_[90m░▒▓│┤╡╢╖╕╣║╗╝╜╛┐    [33mB_[90m░▒▓│┤╡╢╖╕╣║╗╝╜╛┐    [33mB_[90m░▒▓│┤╡╢╖╕╣║╗╝╜╛┐[m
+ [33mC_[90m└┴┬├─┼╞╟╚╔╩╦╠═╬╧    [33mC_[90m└┴┬├─┼╞╟╚╔╩╦╠═╬╧    [33mC_[90m└┴┬├─┼╞╟╚╔╩╦╠═╬╧[m
+ [33mD_[90m╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀    [33mD_[90m╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀    [33mD_[90m╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀[m
+ [33mE_[90mαßΓπΣσµτΦΘΩδ∞φε∩    [33mE_[90mαßΓπΣσµτΦΘΩδ∞φε∩    [33mE_[90mαßΓπΣσµτΦΘΩδ∞φε∩[m
+ [33mF_[90m≡±≥≤⌠⌡÷≈°∙·√ⁿ²■     [33mF_[90m≡±≥≤⌠⌡÷≈°∙·√ⁿ²■     [33mF_[90m≡±≥≤⌠⌡÷≈°∙·√ⁿ²■ [m
+
+When systems capable of graphics appeared, semigraphics became useless.
+It became much better to draw tables and game graphics using the graphics
+modes and to use the text encoding to represent as many characters as
+possible. Code pages kept the ASCII standard and defined as many punctuation
+and letters as possible as the remaining 128 codes.
+
+The ISO Latin 1 character set is designed to handle most western languages,
+and Microsoft extended it, adding some missing punctuation and letters in
+place of the C1 control characters, as was done earlier with the C0 control
+characters. These two code pages are very closely linked, so much that Web
+pages that declare ISO Latin 1 are in fact assumed to be Windows 1252.
+
+ [4mISO 8859-1:Latin 1[24m    [4mWin 1252: Latin 1[24m
   [33m_0123456789ABCDEF     _0123456789ABCDEF[m
- [33m8_[100;30m␥␥[0;90méâ[100;30m␥[0;90mà[100;30m␥[0;90mçêëèïî[100;30m␥␥␥[m    [33m8_[100;30m␥[47;3m 1st[23;100;30m␥␥␥[47;3mbyte of [m
- [33m9_[100;30m␥[mّ[37mْ[90mô[m¤ـ[90[90mûù[mائإ£ؤأآء    [33m9_[47;30;3m  a double-byte [m
- [33mA_[mب[37mة[mت[37mث[mج[37mح[mخ[37mد[mذ[37mر[mز[37mس[mش[37mص«»    [33mA_[100;30m␥[m｡｢｣､･ｦｧｨｩｪｫｬｭｮｯ
- [33mB_[90m░▒▓│┤╡╢╖╕╣║╗╝╜╛┐    [33mB_[mｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿ
- [33mC_[90m└┴┬├─┼╞╟╚╔╩╦╠═╬╧    [33mC_[mﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏ
- [33mD_[90m╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀    [33mD_[mﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝﾞﾟ
- [33mE_[mض[37mط[mظ[37mع[mغ[37mف[mµ[37mق[mك[37mل[mم[37mن[mه[37mو[mى[37mي    [33mE_[47;30;3m character [100;30m␥␥␥␥␥[m
- [33mF_[90m≡[mً[37mٌ[mٍ[37mَ[mُ[37mِ[90m≈°∙·√ⁿ²■     [33mF_[100;30;3m IBM Usr+Ext [23m␥␥␥[m
+ [33m8_[100;30;3m   C1 control   [m    [33m8_[m€[100;30m␥[m‚ƒ„…†‡ˆ‰Š‹Œ[100;30m␥[mŽ[100;30m␥[m
+ [33m9_[100;30;3m   characters   [m    [33m9_[100;30m␥[m‘’“”•–—˜™š›œ[100;30m␥[mžŸ
+ [33mA_[m ¡¢£¤¥¦§¨©ª«¬­®¯    [33mA_[90m ¡¢£¤¥¦§¨©ª«¬­®¯[m
+ [33mB_[m°±²³´µ¶·¸¹º»¼½¾¿    [33mB_[90m°±²³´µ¶·¸¹º»¼½¾¿[m
+ [33mC_[mÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏ    [33mC_[90mÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏ[m
+ [33mD_[mÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞß    [33mD_[90mÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞß[m
+ [33mE_[màáâãäåæçèéêëìíîï    [33mE_[90màáâãäåæçèéêëìíîï[m
+ [33mF_[mðñòóôõö÷øùúûüýþÿ    [33mF_[90mðñòóôõö÷øùúûüýþÿ[m
 
-  [90;3mThe DOS 932 codepage also replaces ASCII 5C [23m\[3m with [23m¥[3m and 7E [23m~[3m with [23m‾[3m.[m
+On early Windows, before Unicode, both philosophies were in use
+simultaneously, the "OEM" code pages for text-mode (CUI) applications with
+their semigraphics from the IBM PC and MS-DOS days, and "ANSI" code pages for
+GUI applications.
 
 
-[2;3m]8;;http://www.phm.lu/Philippe Majerus]8;;, July 2021, last updated April 26, 2024[22;23m
+This document is a work in progress, check back later for more history and
+the transition from ASCII to Unicode.
+
+[2;3m]8;;http://www.phm.lu/Philippe Majerus]8;;, July 2021, last updated March 24, 2025 [22;23m
 
