@@ -4,6 +4,8 @@ Codepage 932 : Japanese (Shift-JIS)
 Single-byte (JIS X 0201)
 ===========
   0123456789ABCDEF
+0| ╔╗╚╝║═￬ ￮ 〿  ￭☼
+1|╬ ↕ ▒╩╦╣ ╠░↵￪￨￫￩
 2| !"#$%&'()*+,-./
 3|0123456789:;<=>?
 4|@ABCDEFGHIJKLMNO

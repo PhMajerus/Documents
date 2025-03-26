@@ -286,8 +286,8 @@ Each DBCS leading byte provides a whole plane of characters.
  [33mB_[mｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿ │ [33mB_[m隹雎雋雉雍襍雜霍雕雹霄霆霈霓霎霑
  [33mC_[mﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏ │ [33mC_[m霏霖霙霤霪霰霹霽霾靄靆靈靂靉靜靠
  [33mD_[mﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝﾞﾟ │ [33mD_[m靤靦靨勒靫靱靹鞅靼鞁靺鞆鞋鞏鞐鞜
- [33mE_[42;30m        ×╶──────[m─╯ [33mE_[m鞨鞦鞣鞳鞴韃韆韈韋韜韭齏韲竟韶韵
- [33mF_[42;30m             [100;30m␥␥␥[m   [33mF_[m頏頌頸頤頡頷頽顆顏顋顫顯顰
+ [33mE_[42;39m        ×╶──────[m─╯ [33mE_[m鞨鞦鞣鞳鞴韃韆韈韋韜韭齏韲竟韶韵
+ [33mF_[42;39m             [100;30m␥␥␥[m   [33mF_[m頏頌頸頤頡頷頽顆顏顋顫顯顰
 
 This arrangement allowed for an MBCS system to contain the 6879 glyphs
 standardized by JIS X 0208, and even add some NEC and IBM extras, and 189
@@ -303,5 +303,5 @@ And then, the Internet happened!
 This document is a work in progress, check back later for more history and
 the transition from ASCII to Unicode.
 
-[2;3m]8;;http://www.phm.lu/Philippe Majerus]8;;, July 2021, last updated March 24, 2025 [22;23m
+[2;3m]8;;http://www.phm.lu/Philippe Majerus]8;;, July 2021, last updated March 26, 2025 [22;23m
 
