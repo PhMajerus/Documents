@@ -21,14 +21,14 @@ The first ASCII standard from 1963 only included uppercase letters and left
   [33m_0123456789ABCDEF[m
  [33m0_[90m␀␁␂␃␄␅•␇␈␉␊␋␌␍␎␏[m
  [33m1_[90m␐␑␒␓␔␕␖␙••••␜␝␞␟[m
- [33m2_[90m␠[m!"#$%&'()*+,-./
+ [33m2_[m !"#$%&'()*+,-./
  [33m3_[m0123456789:;<=>?
  [33m4_[m@ABCDEFGHIJKLMNO
  [33m5_[mPQRSTUVWXYZ[\]↑←
  [33m6_[90m␥␥␥␥␥␥␥␥␥␥␥␥␥␥␥␥[m
  [33m7_[90m␥␥␥␥␥␥␥␥␥␥␥␥␆•␛␡[m
-␥ = Unassigned
-• = Control character with no modern equivalent (RU, S0 to S3, and ① )
+ ␥ = Unassigned
+ • = Control character with no modern equivalent (RU, S0 to S3, and ① )
 
 Many early computers didn't have enough RAM to provide a graphics mode where
 individual pixels could be controlled. They were limited to displaying text.
@@ -69,7 +69,7 @@ many early computers integrated the changes or part of them quickly.
   [33m_0123456789ABCDEF[m
  [33m0_[90m␀␁␂␃␄␅␆␇␈␉␊␋␌␍␎␏[m
  [33m1_[90m␐␑␒␓␔␕␖␗␘␙␚␛␜␝␞␟[m
- [33m2_[90m␠[m!"#$%&'()*+,-./
+ [33m2_[m !"#$%&'()*+,-./
  [33m3_[m0123456789:;<=>?
  [33m4_[m@ABCDEFGHIJKLMNO
  [33m5_[mPQRSTUVWXYZ[\]^_
@@ -85,19 +85,19 @@ different visual effects while only storing 32 8×8 glyphs (256 bytes).
   [33m_0123456789ABCDEF[m
  [33m0_[0;7m@ABCDEFGHIJKLMNO[m  ← Inverse
  [33m1_[0;7mPQRSTUVWXYZ[\]^_[m    (reversed video/negative)
- [33m2_[0;7m␠!"#$%&'()*+,-./[m
+ [33m2_[0;7m !"#$%&'()*+,-./[m
  [33m3_[0;7m0123456789:;<=>?[m
  [33m4_[39;47m@ABCDEFGHIJKLMNO[m  ← Blinking (alternating inverse)
  [33m5_[39;47mPQRSTUVWXYZ[\]^_[m    (changed to MouseText in Apple IIc and
- [33m6_[39;47m␠!"#$%&'()*+,-./[m    IIGS, and Enhanced Apple IIe upgrade.)
+ [33m6_[39;47m !"#$%&'()*+,-./[m    IIGS, and Enhanced Apple IIe upgrade.)
  [33m7_[39;47m0123456789:;<=>?[m
  [33m8_[m@ABCDEFGHIJKLMNO  ← Normal
  [33m9_[mPQRSTUVWXYZ[\]^_
- [33mA_[m␠!"#$%&'()*+,-./
+ [33mA_[m !"#$%&'()*+,-./
  [33mB_[m0123456789:;<=>?
  [33mC_[37m@ABCDEFGHIJKLMNO[m  ← Repeat of normal
  [33mD_[37mPQRSTUVWXYZ[\]^_[m
- [33mE_[37m␠!"#$%&'()*+,-./[m
+ [33mE_[37m !"#$%&'()*+,-./[m
  [33mF_[37m0123456789:;<=>?[m
 
 This means it was not really compatible with ASCII, as the 0x20 to 0x3F rows
@@ -109,20 +109,21 @@ This is part of a "based on ASCII but not quite ASCII" rough start
 developers on early systems encountered.
 
 Some manufacturers also realized they could add glyphs to the C0 control
-characters. They would be interpreted as in-band control when printed or
-transmitted, but if that value was stored in video memory for a character of
-the text screen, it would render as semigraphics, providing 16 more glyphs.
+characters and delete. They would be interpreted as in-band control when
+printed or transmitted, but if that value was stored in video memory for a
+character of the text screen, it would render as semigraphics, providing 17
+more glyphs.
 
  [4mTRS-80[24m                [4mMattel Aquarius[24m
   [33m_0123456789ABCDEF     _0123456789ABCDEF[m
  [33m0_[m␨£|éÜÅ¬öØùñ`āŔÄÃ    [33m0_[m£½¼¾÷©→←↑↓↗↙↘↖𜷰𜷱
  [33m1_[mÑÖØÕßüõæäàȧ∮ÉÆÇ˜    [33m1_[m𜷲𜷳𜷴𜷦𜷧𜷨𜷩𜷪𜷫𜷵▗▝▖▘▚▄
- [33m2_[90m␠!"#$%&'()*+,-./    [33m2_[90m␠!"#$%&'()*+,-./[m
+ [33m2_[90m !"#$%&'()*+,-./    [33m2_[90m !"#$%&'()*+,-./[m
  [33m3_[90m0123456789:;<=>?    [33m3_[90m0123456789:;<=>?[m
  [33m4_[90m@ABCDEFGHIJKLMNO    [33m4_[90m@ABCDEFGHIJKLMNO[m
  [33m5_[90mPQRSTUVWXYZ[\]^_    [33m5_[90mPQRSTUVWXYZ[\]^_[m
  [33m6_[90m`abcdefghijklmno    [33m6_[90m`abcdefghijklmno[m
- [33m7_[90mpqrstuvwxyz{¦}~[m±    [33m7_[90mpqrstuvwxyz{¦}~␡[m
+ [33m7_[90mpqrstuvwxyz{¦}~[m±    [33m7_[90mpqrstuvwxyz{¦}~[m█
  [33m8_[m 🬀🬁🬂🬃🬄🬅🬆🬇🬈🬉🬊🬋🬌🬍🬎    [33m8_[m▇▏𜷬𜷭🮏🮌▒●▂▆🛧𜷸𜷮𜷯▶▲
  [33m9_[m🬏🬐🬑🬒🬓▌🬔🬕🬖🬗🬘🬙🬚🬛🬜🬝    [33m9_[m▁▉𜷶𜷷🮎🮍⬤▎▍▌✈𜷹𜷼𜷻◀▼
  [33mA_[m🬞🬟🬠🬡🬢🬣🬤🬥🬦🬧▐🬨🬩🬪🬫🬬    [33mA_[m 🬀🬁🬂🬃🬄🬅🬆🬇🬈🬉🬊🬋🬌🬍🬎
@@ -152,7 +153,7 @@ tabular data more than game sprites and tiles.
  [33m4_[90m@ABCDEFGHIJKLMNO[m
  [33m5_[90mPQRSTUVWXYZ[\]^_[m
  [33m6_[90m`abcdefghijklmno[m
- [33m7_[m[90mpqrstuvwxyz{[m¦[90m}~[m⌂
+ [33m7_[90mpqrstuvwxyz{[m¦[90m}~[m⌂
 
 While the top half was identical in all markets, the original US-centric
 extras designed for the US didn't support other western countries. It was
@@ -208,6 +209,95 @@ On early Windows, before Unicode, both philosophies were in use
 simultaneously, the "OEM" code pages for text-mode (CUI) applications with
 their semigraphics from the IBM PC and MS-DOS days, and "ANSI" code pages for
 GUI applications.
+
+All these code pages were still 8-bit each. A system like MS-DOS could change
+the code page dynamically by loading another character set into memory, but
+an app would be limited to a single character set of 256 glyphs at most.
+
+The Japanese Industrial Standard JIS X 0201, developed in 1969, was similar
+to how western manufacturers extended ASCII 1967 to add the characters
+required for specific languages. Since Japanese could write and understand
+everything written in latin alphanumerics and Katakana, a Japanese phonetic
+alphabet usually reserved to foreign words, but that could best be
+represented in the low 8×8 resolution of most early computers.
+
+ [4mJIS X 0201[24m
+  [33m_0123456789ABCDEF[m
+ [33m0_[100;30;3m   C0 control   [m
+ [33m1_[100;30;3m   characters   [m
+ [33m2_[90m !"#$%&'()*+,-./[m
+ [33m3_[90m0123456789:;<=>?[m
+ [33m4_[90m@ABCDEFGHIJKLMNO[m
+ [33m5_[90mPQRSTUVWXYZ[[m¥[90m]^_[m
+ [33m6_[90m`abcdefghijklmno[m
+ [33m7_[90mpqrstuvwxyz{|}[m‾[90m␡[m
+ [33m8_[100;30;3m   C1 control   [m
+ [33m9_[100;30;3m   characters   [m
+ [33mA_[100;30m␥[m｡｢｣､･ｦｧｨｩｪｫｬｭｮｯ
+ [33mB_[mｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿ
+ [33mC_[mﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏ
+ [33mD_[mﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝﾞﾟ
+ [33mE_[100;30m␥␥␥␥␥␥␥␥␥␥␥␥␥␥␥␥[m
+ [33mF_[100;30m␥␥␥␥␥␥␥␥␥␥␥␥␥␥␥␥[m
+
+This was not enough for the asian market, and Japan with leading hardware
+manufacturers wanted to support their local market properly.
+But how could that be achieved when you want to support thousands of
+ideographs?
+
+Well, you need more bits to represent them, and since the machines are 8-bit,
+the easiest solution is to extend to two bytes, providing 16 bits, which
+could support 65536 glyphs. Easy enough, but then you are not compatible with
+ASCII anymore and break compatibility with every western application.
+There has to be a better and clever way to have it both ways.
+
+The solution was to mix 8-bit and 16-bit in a single encoding, called
+Multibyte Character Sets (MBCS). The way it works is to keep the JIS X 0201
+characters as they are, and only use some of the unused codes as leading
+bytes of double-byte characters (DBCS). This reduces the total number of
+glyphs that the encoding system can represent, but can easily support all
+common and less common ideographs, even include Greek, Cyrillic, and extended
+Mathematical symbols for technical documents, and stay compatible with ASCII
+systems. This also makes decoding it much harder, as it has to be read from
+the beginning to find out if a value that is valid as a leading byte is a
+leading byte and not a trailing byte.
+A variable-width encoding also makes it much more difficult to find out how
+many characters are in a text string. Fortunately in its original
+implementation in Japanese DOS/V, all the double-byte characters were also
+double-width (called "full-width", relegating the normal width to
+"half-width"). This was also convenient to handle text video memory, as it
+could stay a fixed grid of characters, and double-byte characters would
+simply store their values using two adjacent cells of the text video screen.
+Each DBCS leading byte provides a whole plane of characters.
+
+ [4mDOS 932: Shift JIS[24m
+  [33m_0123456789ABCDEF[m
+ [33m0_[90m␀[m╔╗╚╝║═￬[90m␈[m￮[90m␊[m〿[90m␌␍[m￭☼
+ [33m1_[m╬[90m␑[m↕[90m␓[m▓╩╦╣[90m␘[m╠░↵￪￨￫￩
+ [33m2_[90m !"#$%&'()*+,-./[m ╭→[4mE8: JIS X 0208 Kanji Level 2 Row 79-80[24m
+ [33m3_[90m0123456789:;<=>?[m │  [33m_０１２３４５６７８９ＡＢＣＤＥＦ[m
+ [33m4_[90m@ABCDEFGHIJKLMNO[m │ [33m4_[m錙錢錚錣錺錵錻鍜鍠鍼鍮鍖鎰鎬鎭鎔
+ [33m5_[90mPQRSTUVWXYZ[[m¥[90m]^_[m │ [33m5_[m鎹鏖鏗鏨鏥鏘鏃鏝鏐鏈鏤鐚鐔鐓鐃鐇
+ [33m6_[90m`abcdefghijklmno[m │ [33m6_[m鐐鐶鐫鐵鐡鐺鑁鑒鑄鑛鑠鑢鑞鑪鈩鑰
+ [33m7_[90mpqrstuvwxyz{|}[m‾[90m␡[m │ [33m7_[m鑵鑷鑽鑚鑼鑾钁鑿閂閇閊閔閖閘閙
+ [33m8_[100;30m␥[42;3m     DBCS      [m │ [33m8_[m閠閨閧閭閼閻閹閾闊濶闃闍闌闕闔闖
+ [33m9_[42;30;3m  Leading byte  [m │ [33m9_[m關闡闥闢阡阨阮阯陂陌陏陋陷陜陞陝
+ [33mA_[100;30m␥[m｡｢｣､･ｦｧｨｩｪｫｬｭｮｯ │ [33mA_[m陟陦陲陬隍隘隕隗險隧隱隲隰隴隶隸
+ [33mB_[mｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿ │ [33mB_[m隹雎雋雉雍襍雜霍雕雹霄霆霈霓霎霑
+ [33mC_[mﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏ │ [33mC_[m霏霖霙霤霪霰霹霽霾靄靆靈靂靉靜靠
+ [33mD_[mﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝﾞﾟ │ [33mD_[m靤靦靨勒靫靱靹鞅靼鞁靺鞆鞋鞏鞐鞜
+ [33mE_[42;30m        ×╶──────[m─╯ [33mE_[m鞨鞦鞣鞳鞴韃韆韈韋韜韭齏韲竟韶韵
+ [33mF_[42;30m             [100;30m␥␥␥[m   [33mF_[m頏頌頸頤頡頷頽顆顏顋顫顯顰
+
+This arrangement allowed for an MBCS system to contain the 6879 glyphs
+standardized by JIS X 0208, and even add some NEC and IBM extras, and 189
+End-User-Defined Characters (EUDC) to allow users and apps to provide extra
+glyphs, similarly to Private Use Area characters in Unicode today.
+
+Code pages for Korean and Chinese used the same technique to support a large
+number of characters needed for their respective writing systems.
+
+And then, the Internet happened!
 
 
 This document is a work in progress, check back later for more history and
