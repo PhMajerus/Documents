@@ -274,20 +274,20 @@ Each DBCS leading byte provides a whole plane of characters.
   [33m_0123456789ABCDEF[m
  [33m0_[90m␀[m╔╗╚╝║═￬[90m␈[m￮[90m␊[m〿[90m␌␍[m￭☼
  [33m1_[m╬[90m␑[m↕[90m␓[m▓╩╦╣[90m␘[m╠░↵￪￨￫￩
- [33m2_[90m !"#$%&'()*+,-./[m ╭→[4mE8: JIS X 0208 Kanji Level 2 Row 79-80[24m
- [33m3_[90m0123456789:;<=>?[m │  [33m_０１２３４５６７８９ＡＢＣＤＥＦ[m
- [33m4_[90m@ABCDEFGHIJKLMNO[m │ [33m4_[m錙錢錚錣錺錵錻鍜鍠鍼鍮鍖鎰鎬鎭鎔
- [33m5_[90mPQRSTUVWXYZ[[m¥[90m]^_[m │ [33m5_[m鎹鏖鏗鏨鏥鏘鏃鏝鏐鏈鏤鐚鐔鐓鐃鐇
- [33m6_[90m`abcdefghijklmno[m │ [33m6_[m鐐鐶鐫鐵鐡鐺鑁鑒鑄鑛鑠鑢鑞鑪鈩鑰
- [33m7_[90mpqrstuvwxyz{|}[m‾[90m␡[m │ [33m7_[m鑵鑷鑽鑚鑼鑾钁鑿閂閇閊閔閖閘閙
- [33m8_[100;30m␥[42;3m     DBCS      [m │ [33m8_[m閠閨閧閭閼閻閹閾闊濶闃闍闌闕闔闖
- [33m9_[42;30;3m  Leading byte  [m │ [33m9_[m關闡闥闢阡阨阮阯陂陌陏陋陷陜陞陝
- [33mA_[100;30m␥[m｡｢｣､･ｦｧｨｩｪｫｬｭｮｯ │ [33mA_[m陟陦陲陬隍隘隕隗險隧隱隲隰隴隶隸
- [33mB_[mｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿ │ [33mB_[m隹雎雋雉雍襍雜霍雕雹霄霆霈霓霎霑
- [33mC_[mﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏ │ [33mC_[m霏霖霙霤霪霰霹霽霾靄靆靈靂靉靜靠
- [33mD_[mﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝﾞﾟ │ [33mD_[m靤靦靨勒靫靱靹鞅靼鞁靺鞆鞋鞏鞐鞜
- [33mE_[42;39m        ×╶──────[m─╯ [33mE_[m鞨鞦鞣鞳鞴韃韆韈韋韜韭齏韲竟韶韵
- [33mF_[42;39m             [100;30m␥␥␥[m   [33mF_[m頏頌頸頤頡頷頽顆顏顋顫顯顰
+ [33m2_[90m !"#$%&'()*+,-./[m  ╭→ [4mE8: JIS X 0208 Kanji Level 2 Row 79-80[24m
+ [33m3_[90m0123456789:;<=>?[m  │   [33m_０１２３４５６７８９ＡＢＣＤＥＦ[m
+ [33m4_[90m@ABCDEFGHIJKLMNO[m  │  [33m4_[m錙錢錚錣錺錵錻鍜鍠鍼鍮鍖鎰鎬鎭鎔
+ [33m5_[90mPQRSTUVWXYZ[[m¥[90m]^_[m  │  [33m5_[m鎹鏖鏗鏨鏥鏘鏃鏝鏐鏈鏤鐚鐔鐓鐃鐇
+ [33m6_[90m`abcdefghijklmno[m  │  [33m6_[m鐐鐶鐫鐵鐡鐺鑁鑒鑄鑛鑠鑢鑞鑪鈩鑰
+ [33m7_[90mpqrstuvwxyz{|}[m‾[90m␡[m  │  [33m7_[m鑵鑷鑽鑚鑼鑾钁鑿閂閇閊閔閖閘閙
+ [33m8_[100;30m␥[42;3m     DBCS      [m  │  [33m8_[m閠閨閧閭閼閻閹閾闊濶闃闍闌闕闔闖
+ [33m9_[42;30;3m  Leading byte  [m  │  [33m9_[m關闡闥闢阡阨阮阯陂陌陏陋陷陜陞陝
+ [33mA_[100;30m␥[m｡｢｣､･ｦｧｨｩｪｫｬｭｮｯ  │  [33mA_[m陟陦陲陬隍隘隕隗險隧隱隲隰隴隶隸
+ [33mB_[mｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿ  │  [33mB_[m隹雎雋雉雍襍雜霍雕雹霄霆霈霓霎霑
+ [33mC_[mﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏ  │  [33mC_[m霏霖霙霤霪霰霹霽霾靄靆靈靂靉靜靠
+ [33mD_[mﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝﾞﾟ  │  [33mD_[m靤靦靨勒靫靱靹鞅靼鞁靺鞆鞋鞏鞐鞜
+ [33mE_[42;39m        ×╶──────[m──╯  [33mE_[m鞨鞦鞣鞳鞴韃韆韈韋韜韭齏韲竟韶韵
+ [33mF_[42;39m             [100;30m␥␥␥[m     [33mF_[m頏頌頸頤頡頷頽顆顏顋顫顯顰
 
 This arrangement allowed for an MBCS system to contain the 6879 glyphs
 standardized by JIS X 0208, and even add some NEC and IBM extras, and 189
@@ -297,11 +297,181 @@ glyphs, similarly to Private Use Area characters in Unicode today.
 Code pages for Korean and Chinese used the same technique to support a large
 number of characters needed for their respective writing systems.
 
-And then, the Internet happened!
+In those times, loading a plain-text file coming from another country would
+usually give incorrect extended ASCII characters, as the same codes were
+assigned to different characters depending on the code page in use.
+Encoding-savvy users could change the code page before loading the file if
+they knew which code page has been used to write the text, but even that was
+not always possible. On MS-DOS, MBCS encoding used for Japanese required
+specific extensions only available in DOS/V, so you could never just change
+the code page to 932 on a western computer.
+
+This was just accepted as a fact of countries and locales differences, and
+after all, how often do you really get a floppy disk from another continent
+that contained a text file you couldn't even display properly?
+There was this group of developers from different companies who dreamt of
+unifying all the codes into a single universal system, which would greatly
+improve scientific, linguistic, and history documents that needed to mix
+writing systems, but why would common users ever want to give up the
+simplicity of 8-bit text encoding to display so many characters?
+But then, the Internet happened!
+
+ [4mUnicode[24m
+
+Unicode was very simple, we use 16-bit instead of 8-bit, and everything works
+like it did for the previous 8-bit encoding system. We can count the number
+of characters by counting the number of 16-bit codes, we can directly access
+any character by its index into the text string, etc... it's simpler than
+MBCS, at the expense of using twice as much space for the Latin 1 characters,
+but that's an acceptable price to pay to unify the whole world.
+This is called UCS-2, for 2-byte Universal Character Set, or simply
+"Unicode", as that is the only encoding we will ever need, right?
+Manufacturers were happy to jump on the standard to finally simplify
+localization. Operating Systems such as Windows NT, and languages like Java,
+JavaScript, and many others decided to use this encoding as their standard.
+
+The main concept of a universal character set is simple, take a larger type
+of numbers so you can store more individual characters, and put all those
+code pages into a single table. Since almost all computers used 8-bit chunks
+of memory, the logical choice was 16 bits, two bytes. After all, 65536
+characters ought to be enough for everyone.
+The idea was that every character ever used could be added to the list,
+trying to keep related characters together in blocks, and every existing
+code page could be converted to that system and back.
+The idea of keeping the 7-bit ASCII as it is made it into Unicode, so the
+first 127 characters are the ASCII 1967. And while we're at it, most western
+countries are using ISO Latin 1 (8859-1) as their extended ASCII code page,
+so it would make it very simple to convert to and from that code page to
+simply keep those as the 256 first characters. Ok, we've still got 65280 code
+points available, plenty to support all the alphabets and writing systems of
+the world. This is great, we can add everything!
+So next we add the less common latin letters that didn't make it into ISO
+Latin 1, Greek, Cyryllic, Armenian, Hebrew, Arabic, … All the ideographs used
+in Japan, the JIS X 0208 evolved into JIS X 0212 since the DOS/V days and now
+contains 5801 kanji neatly organized. For China, the GB 12345 standard
+contains 6866 ideographs, the Korean KS X 1001 standard contains 4620 hanja
+(ideographs), as well as 11172 Hangul syllables. Taiwan uses traditional
+ideographs, so they should be separate characters from their Chinese
+equivalents, … Ok, let's not take a third of our 16-bit codes just for those,
+we can probably be smart and merge them into a unified set to keep all those
+ideographs under control. These will be the CJK (Chinese-Japanese-Korean)
+Unified Ideographs blocks.
+
+We can also save characters by avoiding all the accents and diacritics
+variations of the same letter. Instead of having ten different lowercase "a",
+and ten different lowercase "i", and "o", etc…, we could just have each
+letter and each accent that can combine together and display as a single
+glyph. This will make processing text strings more difficult since it means
+some codes are not printable characters by themselves anymore, and the
+perceived length of a string is not the same as the number of codes it
+contains, but that isn't a big issue in the end, many fonts are not
+monospaced, and perceived characters can even depend on culture, so we'll
+work it out with text libraries.
+
+Now we have enough codes left to include other languages with special writing
+systems, such as Thai, Tibetan, Cherokee, … no language should be left out of
+a universal characters system. After all, if this becomes the standard, a
+language that cannot be used on a computer will be in trouble, so everything
+should be supported. And for historians and academic papers, we need to
+include all the older languages that are not in use anymore but that we want
+to document. So that's a thousand cuneiform characters, a thousand Egyptian
+hieroglyphs, oh, and over 40 thousands historic ideographs that are not used
+nowadays but should be included if we want to encode historical documents.
+
+Let's go crazy and add everything we can find printed somewhere, even if
+we're not quite sure some of them are really characters or errors in the copy
+process or even ink stains! After all, we still have thousands of codes
+available!
+Oh! Actually, we're running out of 16-bit values already! Who could have seen
+this coming?!
+We'll need to add more bits, memory got cheap and we could easily move to a
+32-bit value and have enough for eternity. But can we really deprecate years
+of Windows NT, Java, JavaScript, C/C++, etc code that got on the bandwagon
+early?
+We need to find a way to extend the number of characters while remaining
+compatible with UCS-2 systems, keeping existing codes as they are, but using
+the remaining ones to represent more characters… Some kind of variable-length
+encoding where a block of UCS-2 codes would be a leading value of a pair,
+allowing for new planes of characters. I have a weird feeling of déjà-vu.
+
+So Unicode deprecated UCS-2, but assigned blocks that UCS-2 could still
+represent to be used as leading and trailing values of 32-bit pairs.
+This kept the existing characters as they were, and enabled a million more
+characters. The new system would be limited to codes U+0000 to U+10FFFF,
+which is wasteful when storing them as 32-bit values (called UTF-32), but
+ensures that every possible code can be represented in the legacy-compatible
+UTF-16 encoding, which is backward compatible with UCS-2, but with added
+support for surrogate pairs to represent the new codes over U+100000.
+No one would store Unicode as 32-bit characters for storage or transmission,
+and most of the time even in memory. UTF-16 was the perfect solution and
+could be supported by updating internal API processing, without changing
+their public interfaces.
+The UTF-16 encoding means all characters from the BMP (U+0000 to U+FFFF) take
+2 bytes per characters, while non-BMP (> U+FFFF) take 4 bytes.
+
+Many Unix systems were still based on 8-bit character sets though, and UTF-16
+is not compatible with ASCII when processed as a stream of bytes. Maybe
+there's a way to make Unicode backward compatible with ASCII as well?
+ASCII 1967 is still a 7-bit encoding system, what if we used the 128
+remaining values of a byte to create a variable-length encoding of Unicode
+instead of creating code pages?
+If we use the same technique as for MBCS and UTF-16 encodings, using each of
+the 128 codes units available after ASCII as a leading byte followed by any
+of the 256 values possible for the following trailing byte, we can only
+support 32768 more multi-byte values. We need something more complex.
+We could simply say a leading byte is always followed by a fixed number of
+extra bytes, but to support the whole Unicode range that would require all
+values that are not the original 7-bit ASCII to always use 4 bytes… That is
+compatible with ASCII, but very wasteful. The clever solution used by UTF-8
+is to support a fully-variable-lenth encoding, where values can be 1 byte,
+2 bytes, 3 bytes, or 4 bytes depending on how many bits they really need.
+For this, the first byte can be ASCII (0x0xxxxxxx), meaning it's a 1-byte
+code, it can be a 2-byte leading value in the form of 0x110xxxxx, a 3-byte
+leading value in the form of 0x1110xxxx, or a 4-byte leading value, in the
+form 0x11110xxx. The remaining values starting with 0x10xxxxxx are reserved
+to be used only as following bytes of multi-byte values.
+
+ [4mUTF-8[24m
+  [33m_0123456789ABCDEF[m
+ [33m0_[90m␀␁␂␃␄␅␆␇␈␉␊␋␌␍␎␏[m ╶╮
+ [33m1_[90m␐␑␒␓␔␕␖␗␘␙␚␛␜␝␞␟[m  │
+ [33m2_[90m !"#$%&'()*+,-./[m  ├╴ Single-byte code
+ [33m3_[90m0123456789:;<=>?[m  │  (ASCII)
+ [33m4_[90m@ABCDEFGHIJKLMNO[m  │
+ [33m5_[90mPQRSTUVWXYZ[\]^_[m  │
+ [33m6_[90m`abcdefghijklmno[m  │
+ [33m7_[90mpqrstuvwxyz{|}~␡[m ╶╯
+ [33m8_[42;39m                [m ╶╮
+ [33m9_[42;39m  Continuation  [m  ├╴ Continuation byte
+ [33mA_[42;39m      byte      [m  │  (of multi-byte sequence)
+ [33mB_[42;39m                [m ╶╯
+ [33mC_[100;30m␥␥[44;39m   Leading    [m ╶╮
+ [33mD_[44;39m      2-byte    [m  ├╴ Leading byte
+ [33mE_[45;39m Leading 3-byte [m  │  (of multi-byte sequence)
+ [33mF_[46;39mL.4-b[100;30m␥␥␥␥␥␥␥␥␥␥␥[m ╶╯
+
+This clever arrangement can represent all Unicode code points (U+0000 to
+U+10FFFF), never confuse applications and libraries expecting plain ASCII,
+as multi-byte sequences never use a value that could be interpreted as ASCII,
+and makes it possible when reading a byte to immediately know if it is ASCII,
+a leading byte, or a continuation byte, so even if a text stream is missing
+its beginning, the system can resynchronize as soon as the next code point
+starts.
+
+This encoding means plain ASCII takes 1 byte per character, most western,
+Hebrew and Arabic characters take 2 bytes, most asian and historic languages
+take 3 bytes per character, and non-BMP characters (> U+FFFF) take 4 bytes
+per character. So it is very efficient at storing and transmitting files that
+contains mostly ASCII, such as HTML files because of all their markup using
+ASCII, but is less efficient than UTF-16 for most asian text (CJK).
+It has another benefit over UTF-16, since it is a sequence of 8-bit values,
+the bytes order is not dependent on the endianness of the system. Once
+numbers require more than one byte, they can be stored and transmitted with
+the most significant byte first (big-endian), or the least significant byte
+first (little-endian), leading to incompatibilities or extra conversions to
+handle the two possible arrangements of UTF-16 as UTF-16BE and UTF-16LE. This
+makes UTF-8 the ideal choice for cross-systems storage and transmission.
 
 
-This document is a work in progress, check back later for more history and
-the transition from ASCII to Unicode.
-
-[2;3m]8;;http://www.phm.lu/Philippe Majerus]8;;, July 2021, last updated March 26, 2025 [22;23m
+[2;3m]8;;http://www.phm.lu/Philippe Majerus]8;;, July 2021, last updated March 28, 2025 [22;23m
 
