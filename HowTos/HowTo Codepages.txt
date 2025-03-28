@@ -19,16 +19,14 @@ The first ASCII standard from 1963 only included uppercase letters and left
 
  [4mASCII 1963 (7-bit)[24m
   [33m_0123456789ABCDEF[m
- [33m0_[90m␀␁␂␃␄␅•␇␈␉␊␋␌␍␎␏[m
- [33m1_[90m␐␑␒␓␔␕␖␙••••␜␝␞␟[m
- [33m2_[m !"#$%&'()*+,-./
+ [33m0_[90m␀␁␂␃␄␅•␇␈␉␊␋␌␍␎␏[m    ␥ = Unassigned
+ [33m1_[90m␐␑␒␓␔␕␖␙••••␜␝␞␟[m    • = Control character with no modern
+ [33m2_[m !"#$%&'()*+,-./        equivalent (RU, S0 to S3, and ① )
  [33m3_[m0123456789:;<=>?
  [33m4_[m@ABCDEFGHIJKLMNO
  [33m5_[mPQRSTUVWXYZ[\]↑←
  [33m6_[90m␥␥␥␥␥␥␥␥␥␥␥␥␥␥␥␥[m
  [33m7_[90m␥␥␥␥␥␥␥␥␥␥␥␥␆•␛␡[m
- ␥ = Unassigned
- • = Control character with no modern equivalent (RU, S0 to S3, and ① )
 
 Many early computers didn't have enough RAM to provide a graphics mode where
 individual pixels could be controlled. They were limited to displaying text.
@@ -83,22 +81,22 @@ different visual effects while only storing 32 8×8 glyphs (256 bytes).
 
  [4mApple II[24m
   [33m_0123456789ABCDEF[m
- [33m0_[0;7m@ABCDEFGHIJKLMNO[m  ← Inverse
- [33m1_[0;7mPQRSTUVWXYZ[\]^_[m    (reversed video/negative)
- [33m2_[0;7m !"#$%&'()*+,-./[m
- [33m3_[0;7m0123456789:;<=>?[m
- [33m4_[39;47m@ABCDEFGHIJKLMNO[m  ← Blinking (alternating inverse)
- [33m5_[39;47mPQRSTUVWXYZ[\]^_[m    (changed to MouseText in Apple IIc and
- [33m6_[39;47m !"#$%&'()*+,-./[m    IIGS, and Enhanced Apple IIe upgrade.)
- [33m7_[39;47m0123456789:;<=>?[m
- [33m8_[m@ABCDEFGHIJKLMNO  ← Normal
- [33m9_[mPQRSTUVWXYZ[\]^_
- [33mA_[m !"#$%&'()*+,-./
- [33mB_[m0123456789:;<=>?
- [33mC_[37m@ABCDEFGHIJKLMNO[m  ← Repeat of normal
- [33mD_[37mPQRSTUVWXYZ[\]^_[m
- [33mE_[37m !"#$%&'()*+,-./[m
- [33mF_[37m0123456789:;<=>?[m
+ [33m0_[0;7m@ABCDEFGHIJKLMNO[m ╶╮
+ [33m1_[0;7mPQRSTUVWXYZ[\]^_[m  ├╴ Inverse
+ [33m2_[0;7m !"#$%&'()*+,-./[m  │  (reversed video / negative)
+ [33m3_[0;7m0123456789:;<=>?[m ╶╯
+ [33m4_[39;47m@ABCDEFGHIJKLMNO[m ╶╮
+ [33m5_[39;47mPQRSTUVWXYZ[\]^_[m  ├╴ Blinking (alternating inverse)
+ [33m6_[39;47m !"#$%&'()*+,-./[m  │  (Changed to MouseText in Apple IIc and
+ [33m7_[39;47m0123456789:;<=>?[m ╶╯  IIGS, and Enhanced Apple IIe upgrade.)
+ [33m8_[m@ABCDEFGHIJKLMNO ╶╮
+ [33m9_[mPQRSTUVWXYZ[\]^_  ├╴ Normal
+ [33mA_[m !"#$%&'()*+,-./  │
+ [33mB_[m0123456789:;<=>? ╶╯
+ [33mC_[37m@ABCDEFGHIJKLMNO[m ╶╮
+ [33mD_[37mPQRSTUVWXYZ[\]^_[m  ├╴ Repeat of normal
+ [33mE_[37m !"#$%&'()*+,-./[m  │
+ [33mF_[37m0123456789:;<=>?[m ╶╯
 
 This means it was not really compatible with ASCII, as the 0x20 to 0x3F rows
 originally assigned to punctuation and digits would be their inverse
@@ -274,20 +272,20 @@ Each DBCS leading byte provides a whole plane of characters.
   [33m_0123456789ABCDEF[m
  [33m0_[90m␀[m╔╗╚╝║═￬[90m␈[m￮[90m␊[m〿[90m␌␍[m￭☼
  [33m1_[m╬[90m␑[m↕[90m␓[m▓╩╦╣[90m␘[m╠░↵￪￨￫￩
- [33m2_[90m !"#$%&'()*+,-./[m  ╭→ [4mE8: JIS X 0208 Kanji Level 2 Row 79-80[24m
- [33m3_[90m0123456789:;<=>?[m  │   [33m_０１２３４５６７８９ＡＢＣＤＥＦ[m
- [33m4_[90m@ABCDEFGHIJKLMNO[m  │  [33m4_[m錙錢錚錣錺錵錻鍜鍠鍼鍮鍖鎰鎬鎭鎔
- [33m5_[90mPQRSTUVWXYZ[[m¥[90m]^_[m  │  [33m5_[m鎹鏖鏗鏨鏥鏘鏃鏝鏐鏈鏤鐚鐔鐓鐃鐇
- [33m6_[90m`abcdefghijklmno[m  │  [33m6_[m鐐鐶鐫鐵鐡鐺鑁鑒鑄鑛鑠鑢鑞鑪鈩鑰
- [33m7_[90mpqrstuvwxyz{|}[m‾[90m␡[m  │  [33m7_[m鑵鑷鑽鑚鑼鑾钁鑿閂閇閊閔閖閘閙
- [33m8_[100;30m␥[42;3m     DBCS      [m  │  [33m8_[m閠閨閧閭閼閻閹閾闊濶闃闍闌闕闔闖
- [33m9_[42;30;3m  Leading byte  [m  │  [33m9_[m關闡闥闢阡阨阮阯陂陌陏陋陷陜陞陝
- [33mA_[100;30m␥[m｡｢｣､･ｦｧｨｩｪｫｬｭｮｯ  │  [33mA_[m陟陦陲陬隍隘隕隗險隧隱隲隰隴隶隸
- [33mB_[mｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿ  │  [33mB_[m隹雎雋雉雍襍雜霍雕雹霄霆霈霓霎霑
- [33mC_[mﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏ  │  [33mC_[m霏霖霙霤霪霰霹霽霾靄靆靈靂靉靜靠
- [33mD_[mﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝﾞﾟ  │  [33mD_[m靤靦靨勒靫靱靹鞅靼鞁靺鞆鞋鞏鞐鞜
- [33mE_[42;39m        ×╶──────[m──╯  [33mE_[m鞨鞦鞣鞳鞴韃韆韈韋韜韭齏韲竟韶韵
- [33mF_[42;39m             [100;30m␥␥␥[m     [33mF_[m頏頌頸頤頡頷頽顆顏顋顫顯顰
+ [33m2_[90m !"#$%&'()*+,-./[m   ╭─→ [4mE8: JIS X 0208 Kanji Level 2 Row 79-80[24m
+ [33m3_[90m0123456789:;<=>?[m   │    [33m_０１２３４５６７８９ＡＢＣＤＥＦ[m
+ [33m4_[90m@ABCDEFGHIJKLMNO[m   │   [33m4_[m錙錢錚錣錺錵錻鍜鍠鍼鍮鍖鎰鎬鎭鎔
+ [33m5_[90mPQRSTUVWXYZ[[m¥[90m]^_[m   │   [33m5_[m鎹鏖鏗鏨鏥鏘鏃鏝鏐鏈鏤鐚鐔鐓鐃鐇
+ [33m6_[90m`abcdefghijklmno[m   │   [33m6_[m鐐鐶鐫鐵鐡鐺鑁鑒鑄鑛鑠鑢鑞鑪鈩鑰
+ [33m7_[90mpqrstuvwxyz{|}[m‾[90m␡[m   │   [33m7_[m鑵鑷鑽鑚鑼鑾钁鑿閂閇閊閔閖閘閙
+ [33m8_[100;30m␥[42;3m     DBCS      [m   │   [33m8_[m閠閨閧閭閼閻閹閾闊濶闃闍闌闕闔闖
+ [33m9_[42;30;3m leading bytes  [m   │   [33m9_[m關闡闥闢阡阨阮阯陂陌陏陋陷陜陞陝
+ [33mA_[100;30m␥[m｡｢｣､･ｦｧｨｩｪｫｬｭｮｯ   │   [33mA_[m陟陦陲陬隍隘隕隗險隧隱隲隰隴隶隸
+ [33mB_[mｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿ   │   [33mB_[m隹雎雋雉雍襍雜霍雕雹霄霆霈霓霎霑
+ [33mC_[mﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏ   │   [33mC_[m霏霖霙霤霪霰霹霽霾靄靆靈靂靉靜靠
+ [33mD_[mﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝﾞﾟ   │   [33mD_[m靤靦靨勒靫靱靹鞅靼鞁靺鞆鞋鞏鞐鞜
+ [33mE_[42;39m        ×╶──────[m───╯   [33mE_[m鞨鞦鞣鞳鞴韃韆韈韋韜韭齏韲竟韶韵
+ [33mF_[42;39m             [100;30m␥␥␥[m       [33mF_[m頏頌頸頤頡頷頽顆顏顋顫顯顰
 
 This arrangement allowed for an MBCS system to contain the 6879 glyphs
 standardized by JIS X 0208, and even add some NEC and IBM extras, and 189
@@ -435,18 +433,18 @@ to be used only as following bytes of multi-byte values.
   [33m_0123456789ABCDEF[m
  [33m0_[90m␀␁␂␃␄␅␆␇␈␉␊␋␌␍␎␏[m ╶╮
  [33m1_[90m␐␑␒␓␔␕␖␗␘␙␚␛␜␝␞␟[m  │
- [33m2_[90m !"#$%&'()*+,-./[m  ├╴ Single-byte code
+ [33m2_[90m !"#$%&'()*+,-./[m  ├╴ Single-byte codes
  [33m3_[90m0123456789:;<=>?[m  │  (Identical to ASCII)
  [33m4_[90m@ABCDEFGHIJKLMNO[m  │
  [33m5_[90mPQRSTUVWXYZ[\]^_[m  │
  [33m6_[90m`abcdefghijklmno[m  │
  [33m7_[90mpqrstuvwxyz{|}~␡[m ╶╯
  [33m8_[42;39m                [m ╶╮
- [33m9_[42;39;3m  Continuation  [m  ├╴ Continuation byte
+ [33m9_[42;39;3m  Continuation  [m  ├╴ Continuation bytes
  [33mA_[42;39;3m      byte      [m  │  (of multi-byte sequence)
  [33mB_[42;39m                [m ╶╯
- [33mC_[100;30m␥␥[44;39;3m   2-byte     [m ╶╮
- [33mD_[44;39;3m      leading   [m  ├╴ Leading byte
+ [33mC_[100;30m␥␥[44;39;3m  2-byte      [m ╶╮
+ [33mD_[44;39;3m     leading    [m  ├╴ Leading bytes
  [33mE_[45;39;3m 3-byte leading [m  │  (of multi-byte sequence)
  [33mF_[46;39;3m4-b l[0;100;30m␥␥␥␥␥␥␥␥␥␥␥[m ╶╯
 
