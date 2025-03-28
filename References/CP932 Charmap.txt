@@ -4,13 +4,13 @@ Codepage 932 : Japanese (Shift JIS)
 Code page 932 is a DOS/V MBCS (multibyte character set) encoding. The base
 SBCS (single-byte character set) plane is compatible with ASCII, but some
 bytes are used as leading bytes for DBCS (double-byte charactet set) planes.
-For example, while 0xB5 is the ｵ character, 0x88 cannot be used alone, it
-must be used in a DBCS sequence. For example 0x88 0xC0 is the 安 character.
+For example, while 0xB5 is the ｵ character, 0x88 cannot be used alone. It
+must be used in a DBCS sequence, for example 0x88 0xC0 is the 安 character.
 
 
 Single-byte (JIS X 0201)
 ===========
-  [33m0123456789ABCDEF[m
+ [33m_0123456789ABCDEF[m
 [33m0_[m ╔╗╚╝║═￬ ￮ 〿  ￭☼
 [33m1_[m╬ ↕ ▒╩╦╣ ╠░↵￪￨￫￩
 [33m2_[m !"#$%&'()*+,-./
