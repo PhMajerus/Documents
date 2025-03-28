@@ -436,19 +436,19 @@ to be used only as following bytes of multi-byte values.
  [33m0_[90m␀␁␂␃␄␅␆␇␈␉␊␋␌␍␎␏[m ╶╮
  [33m1_[90m␐␑␒␓␔␕␖␗␘␙␚␛␜␝␞␟[m  │
  [33m2_[90m !"#$%&'()*+,-./[m  ├╴ Single-byte code
- [33m3_[90m0123456789:;<=>?[m  │  (ASCII)
+ [33m3_[90m0123456789:;<=>?[m  │  (Identical to ASCII)
  [33m4_[90m@ABCDEFGHIJKLMNO[m  │
  [33m5_[90mPQRSTUVWXYZ[\]^_[m  │
  [33m6_[90m`abcdefghijklmno[m  │
  [33m7_[90mpqrstuvwxyz{|}~␡[m ╶╯
  [33m8_[42;39m                [m ╶╮
- [33m9_[42;39m  Continuation  [m  ├╴ Continuation byte
- [33mA_[42;39m      byte      [m  │  (of multi-byte sequence)
+ [33m9_[42;39;3m  Continuation  [m  ├╴ Continuation byte
+ [33mA_[42;39;3m      byte      [m  │  (of multi-byte sequence)
  [33mB_[42;39m                [m ╶╯
- [33mC_[100;30m␥␥[44;39m   Leading    [m ╶╮
- [33mD_[44;39m      2-byte    [m  ├╴ Leading byte
- [33mE_[45;39m Leading 3-byte [m  │  (of multi-byte sequence)
- [33mF_[46;39mL.4-b[100;30m␥␥␥␥␥␥␥␥␥␥␥[m ╶╯
+ [33mC_[100;30m␥␥[44;39;3m   2-byte     [m ╶╮
+ [33mD_[44;39;3m      leading   [m  ├╴ Leading byte
+ [33mE_[45;39;3m 3-byte leading [m  │  (of multi-byte sequence)
+ [33mF_[46;39;3m4-b l[0;100;30m␥␥␥␥␥␥␥␥␥␥␥[m ╶╯
 
 This clever arrangement can represent all Unicode code points (U+0000 to
 U+10FFFF), never confuse applications and libraries expecting plain ASCII,
