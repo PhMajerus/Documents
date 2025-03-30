@@ -37,7 +37,7 @@ Since most early home computers were 8-bit systems, their designers quickly
 realized they could add an extra 128 characters from 0x80 to 0xFF to provide
 international alphabets and semigraphics, allowing for rudimentary graphics.
 
-For example, the Commodore PETSCII (PET, C=64, …), based on ASCII 1963:
+For example, the Commodore PETSCII (PET, C=64, …) was based on ASCII 1963:
 
  [4mPETSCII (standard)[24m    [4mPETSCII (shifted)[24m
   [33m_0123456789ABCDEF     _0123456789ABCDEF[m
@@ -53,7 +53,10 @@ For example, the Commodore PETSCII (PET, C=64, …), based on ASCII 1963:
  [33m9_[100;30;3m control chars  [m    [33m9_[100;30;3m control chars  [m
  [33mA_[m ▌▄▔▁▏🮕▕🮏◤🮇├▗└┐▂    [33mA_[90m ▌▄▔▁▏🮕▕🮏[m🮙[90m🮇├▗└┐▂[m
  [33mB_[m┌┴┬┤▎▍🮈🮂🮃▃🭿▖▝┘▘▚    [33mB_[90m┌┴┬┤▎▍🮈🮂🮃▃[m✓[90m▖▝┘▘▚[m
- [90;3mC0 to DF are repeats of 40 to 5F, and E0 to FF are repeats of A0 to BF.[m
+ [33mC_[100;30;3mRepeat of 40-5F [m    [33mC_[100;30;3mRepeat of 40-5F [m
+ [33mD_[100;30;3m letters+symbols[m    [33mD_[100;30;3m letters+symbols[m
+ [33mE_[100;30;3mRepeat of A0-BF [m    [33mE_[100;30;3mRepeat of A0-BF [m
+ [33mF_[100;30;3m semigraphics   [m    [33mF_[100;30;3m semigraphics   [m
 
 The committee in charge of ASCII quickly decided that lowercase letters were
 important to include as well, and deprecated some control characters and
@@ -70,10 +73,10 @@ many early computers integrated the changes or part of them quickly.
   [33m_0123456789ABCDEF[m
  [33m0_[90m␀␁␂␃␄␅␆␇␈␉␊␋␌␍␎␏[m
  [33m1_[90m␐␑␒␓␔␕␖␗␘␙␚␛␜␝␞␟[m
- [33m2_[m !"#$%&'()*+,-./
- [33m3_[m0123456789:;<=>?
- [33m4_[m@ABCDEFGHIJKLMNO
- [33m5_[mPQRSTUVWXYZ[\]^_
+ [33m2_[90m !"#$%&'()*+,-./[m
+ [33m3_[90m0123456789:;<=>?[m
+ [33m4_[90m@ABCDEFGHIJKLMNO[m
+ [33m5_[90mPQRSTUVWXYZ[\][m^_
  [33m6_[m`abcdefghijklmno
  [33m7_[mpqrstuvwxyz{|}~[90m␡[m
 
@@ -115,28 +118,34 @@ printed or transmitted, but if that value was stored in video memory for a
 character of the text screen, it would render as semigraphics, providing 17
 more glyphs.
 
- [4mTRS-80[24m                [4mMattel Aquarius[24m
-  [33m_0123456789ABCDEF     _0123456789ABCDEF[m
- [33m0_[m␨£|éÜÅ¬öØùñ`āŔÄÃ    [33m0_[m£½¼¾÷©→←↑↓↗↙↘↖𜷰𜷱
- [33m1_[mÑÖØÕßüõæäàȧ∮ÉÆÇ˜    [33m1_[m𜷲𜷳𜷴𜷦𜷧𜷨𜷩𜷪𜷫𜷵▗▝▖▘▚▄
- [33m2_[90m !"#$%&'()*+,-./    [33m2_[90m !"#$%&'()*+,-./[m
- [33m3_[90m0123456789:;<=>?    [33m3_[90m0123456789:;<=>?[m
- [33m4_[90m@ABCDEFGHIJKLMNO    [33m4_[90m@ABCDEFGHIJKLMNO[m
- [33m5_[90mPQRSTUVWXYZ[\]^_    [33m5_[90mPQRSTUVWXYZ[\]^_[m
- [33m6_[90m`abcdefghijklmno    [33m6_[90m`abcdefghijklmno[m
- [33m7_[90mpqrstuvwxyz{¦}~[m±    [33m7_[90mpqrstuvwxyz{¦}~[m█
- [33m8_[m 🬀🬁🬂🬃🬄🬅🬆🬇🬈🬉🬊🬋🬌🬍🬎    [33m8_[m▇▏𜷬𜷭🮏🮌▒●▂▆🛧𜷸𜷮𜷯▶▲
- [33m9_[m🬏🬐🬑🬒🬓▌🬔🬕🬖🬗🬘🬙🬚🬛🬜🬝    [33m9_[m▁▉𜷶𜷷🮎🮍⬤▎▍▌✈𜷹𜷼𜷻◀▼
- [33mA_[m🬞🬟🬠🬡🬢🬣🬤🬥🬦🬧▐🬨🬩🬪🬫🬬    [33mA_[m 🬀🬁🬂🬃🬄🬅🬆🬇🬈🬉🬊🬋🬌🬍🬎
- [33mB_[m🬭🬮🬯🬰🬱🬲🬳🬴🬵🬶🬷🬸🬹🬺🬻█    [33mB_[m🬏🬐🬑🬒🬓▌🬔🬕🬖🬗🬘🬙🬚🬛🬜🬝
- [33mC_[m♠♥♦♣☺☹≤≥αβγδεζηθ    [33mC_[m◢◣🯨▊▪♦·🯬┼🯭╱🯩┴├┐└
- [33mD_[mικλμνξοπρστυφχψω    [33mD_[m𜷿𜷾🯪𜷽♥♣│🯮╳🯯╲🯫┬┤┌┘
- [33mE_[mΩ√÷∑≈∆⌇≠🗲%⍾∞✓§🯋©    [33mE_[m🬞🬟🬠🬡🬢🬣🬤🬥🬦🬧▐🬨🬩🬪🬫🬬
- [33mF_[m¤¶¢®🯁🯂🯃℞℅♂♀🯌🯄🯅🯉🯊    [33mF_[m🬭🬮🬯🬰🬱🬲🬳🬴🬵🬶🬷🬸🬹🬺🬻█
+ [4mTRS-80[24m                [4mMattel Aquarius[24m       [4mAmstrad CPC[24m
+  [33m_0123456789ABCDEF     _0123456789ABCDEF     _0123456789ABCDEF[m
+ [33m0_[m␨£|éÜÅ¬öØùñ`āŔÄÃ    [33m0_[m£½¼¾÷©→←↑↓↗↙↘↖𜷰𜷱    [33m0_[m◻⎾⏊⏌[95m¹[m⊠✓⍾←→↓↑↡↲⊗⊙  [95m¹[m=⚡︎
+ [33m1_[mÑÖØÕßüõæäàȧ∮ÉÆÇ˜    [33m1_[m𜷲𜷳𜷴𜷦𜷧𜷨𜷩𜷪𜷫𜷵▗▝▖▘▚▄    [33m1_[m⊟◷◶◵◴⍻⎍⊣⧖⍿␦⊖◰◱◲◳
+ [33m2_[90m !"#$%&'()*+,-./    [33m2_[90m !"#$%&'()*+,-./[m    [33m2_[90m !"#$%&'()*+,-./[m
+ [33m3_[90m0123456789:;<=>?    [33m3_[90m0123456789:;<=>?[m    [33m3_[90m0123456789:;<=>?[m
+ [33m4_[90m@ABCDEFGHIJKLMNO    [33m4_[90m@ABCDEFGHIJKLMNO[m    [33m4_[90m@ABCDEFGHIJKLMNO[m
+ [33m5_[90mPQRSTUVWXYZ[\]^_    [33m5_[90mPQRSTUVWXYZ[\]^_[m    [33m5_[90mPQRSTUVWXYZ[\][m↑[90m_[m
+ [33m6_[90m`abcdefghijklmno    [33m6_[90m`abcdefghijklmno[m    [33m6_[90m`abcdefghijklmnp[m
+ [33m7_[90mpqrstuvwxyz{[m¦[90m}~[m±    [33m7_[90mpqrstuvwxyz{[m¦[90m}~[m█    [33m7_[90mpqrstuvwxyz{|}~[m␩
+ [33m8_[m 🬀🬁🬂🬃🬄🬅🬆🬇🬈🬉🬊🬋🬌🬍🬎    [33m8_[m▇▏𜷬𜷭🮏🮌▒●▂▆🛧𜷸𜷮𜷯▶▲    [33m8_[m ▘▝▀▖▌▞▛▗▚▐▜▄▙▟█
+ [33m9_[m🬏🬐🬑🬒🬓▌🬔🬕🬖🬗🬘🬙🬚🬛🬜🬝    [33m9_[m▁▉𜷶𜷷🮎🮍⬤▎▍▌✈𜷹𜷼𜷻◀▼    [33m9_[m·╵╶╰╷│╭├╴╯─┴╮┤┬┼
+ [33mA_[m🬞🬟🬠🬡🬢🬣🬤🬥🬦🬧▐🬨🬩🬪🬫🬬    [33mA_[m 🬀🬁🬂🬃🬄🬅🬆🬇🬈🬉🬊🬋🬌🬍🬎    [33mA_[m^´¨£©¶§‘¼½¾±÷¬¿¡
+ [33mB_[m🬭🬮🬯🬰🬱🬲🬳🬴🬵🬶🬷🬸🬹🬺🬻█    [33mB_[m🬏🬐🬑🬒🬓▌🬔🬕🬖🬗🬘🬙🬚🬛🬜🬝    [33mB_[mαβγδεθλμπσφψχωΣΩ
+ [33mC_[m♠♥♦♣☺☹≤≥αβγδεζηθ    [33mC_[m◢◣🯨▊▪♦·🯬┼🯭╱🯩┴├┐└    [33mC_[m🮠🮡🮣🮢🮧🮥🮦🮤🮨🮩🮮╳╱╲🮕▒
+ [33mD_[mικλμνξοπρστυφχψω    [33mD_[m𜷿𜷾🯪𜷽♥♣│🯮╳🯯╲🯫┬┤┌┘    [33mD_[m▔▕▁▏◤◥◢◣🮎🮍🮏🮌🮜🮝🮞🮟
+ [33mE_[mΩ√÷∑≈∆⌇≠🗲%⍾∞✓§🯋©    [33mE_[m🬞🬟🬠🬡🬢🬣🬤🬥🬦🬧▐🬨🬩🬪🬫🬬    [33mE_[m☺☹♣♦♥♠○●□■♂♀♩♪☼𜱗
+ [33mF_[m¤¶¢®🯁🯂🯃℞℅♂♀🯌🯄🯅🯉🯊    [33mF_[m🬭🬮🬯🬰🬱🬲🬳🬴🬵🬶🬷🬸🬹🬺🬻█    [33mF_[m⭡⭣⭠⭢▲▼▶◀🯆🯅🯇🯈𜱣𜱤⭥⭤
 
-These two systems also introduce another idea to compensate for the lack of a
-graphics mode. A set of characters provide a low-resolution set of 2×2 or 2×3
-pseudo-pixels patterns, making it possible to create crude arbitrary graphics.
+The TRS-80 and Mattel Aquarius lack a graphics mode, instead they compensate
+for it with sets of characters that provide a low-resolution set of 2×2 or
+2×3 pseudo-pixels mosaics patterns, making it possible to create crude
+arbitrary graphics.
+
+Some character sets, such as the Amstrad CPC above, kept the ↑ symbols from
+ASCII 1963 in place of ^ from ASCII 1967. These were pretty much considered
+equivalent in the 1980's, and explains why most flavors of the BASIC language
+use ^ as the exponentiation operator, which made perfect sense as ↑.
 
 When IBM introduced the IBM 5150 Personal Computer in 1981, they decided to
 follow the trend by using ASCII and adding extra characters both in 0x80 to
@@ -209,6 +218,16 @@ represented in the low 8×8 resolution of most early computers.
  [33mE_[100;30m␥␥␥␥␥␥␥␥␥␥␥␥␥␥␥␥[m
  [33mF_[100;30m␥␥␥␥␥␥␥␥␥␥␥␥␥␥␥␥[m
 
+I won't cover the details of the Hitachi Basic Master MB-6880, Sharp MZ-80K,
+and NEC PC-8001 and their successors, because while significants in Japan,
+these systems did not influence other character sets outside of their series.
+The only notable legacy of these systems in modern Unicode is the inclusion
+of their semigraphic characters not found on other systems as part of the
+Symbols for Legacy Computing Supplement blocks in Unicode 16.0.
+It can however be noted that while these systems were based on ASCII and
+Katakana, Sharp and NEC included some Kanji used to write dates as part of
+their semigraphics, which probably influenced the MSX character set design.
+
 For the MSX system, Microsoft based its international character set on the
 IBM PC / DOS 437, but moving the single-line box drawing characters to the
 0x1x row, and including more original semigraphics in the 0xC0 to 0xDF space
@@ -232,7 +251,7 @@ hardware improvements before they will be able to support more Kanji.
  [33mA_[90máíóúñÑªº¿⌐¬½¼¡«»    [33mA_[100;30m␥ [0;90m。「」、・ヲァィゥェォャュョッ[m
  [33mB_[mÃãĨĩÕõŨũĲĳ¾∽◊‰¶§    [33mB_[90mーアイウエオカキクケコサシスセソ[m
  [33mC_[m▂▚▆🮂▬🮅▎▞▊🮇🮊🮙🮘🭭🭯🭬    [33mC_[90mタチツテトナニヌネノハヒフヘホマ[m
- [33mD_[m🭮🮚🮛▘▗▝▖🮖Δ‡ω█▄▌▐▀    [33mD_[90mミムメモヤユヨラリルレロワン゙゚[m
+ [33mD_[m🭮🮚🮛▘▗▝▖🮖Δ‡ω[90m█▄▌▐▀    [33mD_[90mミムメモヤユヨラリルレロワン゙゚[m
  [33mE_[90mαßΓπΣσµτΦΘΩδ∞⌀∈∩    [33mE_[mたちつてとなにぬねのはひふへほま
  [33mF_[90m≡±≥≤⌠⌡÷≈°∙·√ⁿ²■█    [33mF_[mみむめもやゆよらりるれろわん[100;30m␥ [0;90m██[m
 
@@ -309,11 +328,11 @@ Each DBCS leading byte provides a whole plane of characters.
  [33m6_[90m`abcdefghijklmno[m   │   [33m6_[m鐐鐶鐫鐵鐡鐺鑁鑒鑄鑛鑠鑢鑞鑪鈩鑰
  [33m7_[90mpqrstuvwxyz{|}[m‾[90m␡[m   │   [33m7_[m鑵鑷鑽鑚鑼鑾钁鑿閂閇閊閔閖閘閙
  [33m8_[100;30m␥[42;39;3m     DBCS      [m   │   [33m8_[m閠閨閧閭閼閻閹閾闊濶闃闍闌闕闔闖
- [33m9_[42;39;3m leading bytes  [m   │   [33m9_[m關闡闥闢阡阨阮阯陂陌陏陋陷陜陞陝
- [33mA_[100;30m␥[m｡｢｣､･ｦｧｨｩｪｫｬｭｮｯ   │   [33mA_[m陟陦陲陬隍隘隕隗險隧隱隲隰隴隶隸
- [33mB_[mｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿ   │   [33mB_[m隹雎雋雉雍襍雜霍雕雹霄霆霈霓霎霑
- [33mC_[mﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏ   │   [33mC_[m霏霖霙霤霪霰霹霽霾靄靆靈靂靉靜靠
- [33mD_[mﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝﾞﾟ   │   [33mD_[m靤靦靨勒靫靱靹鞅靼鞁靺鞆鞋鞏鞐鞜
+ [33m9_[42;39;3m  leading bytes [m   │   [33m9_[m關闡闥闢阡阨阮阯陂陌陏陋陷陜陞陝
+ [33mA_[100;30m␥[0;90m｡｢｣､･ｦｧｨｩｪｫｬｭｮｯ[m   │   [33mA_[m陟陦陲陬隍隘隕隗險隧隱隲隰隴隶隸
+ [33mB_[90mｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿ[m   │   [33mB_[m隹雎雋雉雍襍雜霍雕雹霄霆霈霓霎霑
+ [33mC_[90mﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏ[m   │   [33mC_[m霏霖霙霤霪霰霹霽霾靄靆靈靂靉靜靠
+ [33mD_[90mﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝﾞﾟ[m   │   [33mD_[m靤靦靨勒靫靱靹鞅靼鞁靺鞆鞋鞏鞐鞜
  [33mE_[42;39m        ×╶──────[m───╯   [33mE_[m鞨鞦鞣鞳鞴韃韆韈韋韜韭齏韲竟韶韵
  [33mF_[42;39m             [100;30m␥␥␥[m       [33mF_[m頏頌頸頤頡頷頽顆顏顋顫顯顰
 
