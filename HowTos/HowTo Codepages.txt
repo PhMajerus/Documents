@@ -1,24 +1,44 @@
 [m
- 𜷋𜺣 𜷋𜴧𜶜𜺣𜺠𜵡𜶜𜺣 𜶜𜵡  𜶜𜵡     𜺠𜵡𜶻              𜴘▄                             
+ 𜷋𜺣 𜷋𜴧𜶜𜺣𜺠𜵡𜶜𜺣 𜶜𜵡  𜶜𜵡     𜺠𜵡𜶻              𜴘▄
 𜷥𜶬𜷖𜵈𜴅𜴫𜶽𜺨█  𜺨 ▐▌  ▐▌     𜷍𜶩𜷒𜴉    𜷡𜴆𜴣𜴉𜷡𜴆𜶙▖𜷋𜴔█ 𜷡𜶷𜷗▖    𜶙𜵋𜶙▖𜵸𜶷𜷞 𜷡𜴆𜷡𜴀𜷡𜶷𜷗▖𜶤𜵁𜴣𜴉
 █ ▐▌𜶨▂𜷕𜴍𜴦𜶻𜷋🯦 𜷕𜷀  𜷕𜷀     𜶫▂𜶫𜺣    𜶫▂𜷋𜴉𜶫▂𜷕𜴍𜶫▂𜶫𜺣𜶫▂𜷋𜴉    ▐𜷀𜷕𜴍𜶫▂𜶫𜺣𜶫▂█ 𜶫▂𜷋𜴉𜶜𜶮𜷘𜴉
-                                                    𜴱𜴬      𜴣𜴧𜴗         
+                                                    𜴱𜴬      𜴣𜴧𜴗
 #6 The tumultuous journey to Unicode
 
-This document contains legacy computers character sets, those will display
-properly only if you use a font that contains the complete Symbols for Legacy
-Computing and Supplement blocks from Unicode 16.0.
 
-This document does not cover BCDIC and EBCDIC because while significant, they
-did not evolve into modern Unicode. ASCII on the other hand is included as it
-as the beginning of Latin-1, which in turn is included as it as the beginning
-of Unicode, and also influenced UTF-8 design.
+ [4mIntroduction[24m
+
+This document contains legacy computers character sets, those will display
+properly only if you use a font that contains most of the Symbols for Legacy
+Computing and Supplement blocks from Unicode 16.0 and many legacy characters.
+I made sure that ]8;;https://github.com/slavfox/Cozette/Cozette]8;; 1.29.0 supports all of them, you can use it as it, or
+as a fallback with another font of your choice for the missing characters.
+
+This document does not cover Baudot Code, BCDIC, and EBCDIC because while
+significant, they did not evolve into modern Unicode. ASCII on the other hand
+evolved into Latin-1, which in turn is included as it as the first block of
+Unicode. ASCII and its extensions also heavily influenced UTF-8 design.
 I did not include all existing code pages, as there were plenty to support
 different locales, only some notable ones to showcase the principles and
-evolutions of text encoding on personal computers.
+evolutions of text encoding on personal computers and cover general ideas.
 
-The first ASCII standard from 1963 only included uppercase letters and left
-28 codes unassigned.
+
+The first ASCII standard from 1963 only included uppercase letters, numbers
+and punctuation, as well as many control characters, and left 28 codes
+unassigned.
+The control characters were critical because the encoding was not just
+designed to store text strings in memory or in files, but also to handle
+serial communication between a time-sharing or mainframe computer and a
+teletype, or other telecommunication equipments. It included in-band control
+codes besides printable characters, such as move to a new line, shift to
+another character set, or lower level such as handshake between devices.
+Terminal emulators still use some of those control codes today, and even
+plain text uses the carriage return and/or line feed codes to end lines.
+While they immediately recognized that lowercase would be important as well,
+they were not yet sure whether they could "waste" code that might be required
+for control to provide direct access to lowercase, or if it would be better
+to use some shifting scheme, such as a start-lowercase and end-lowercase pair
+of codes that would change the letters to their lowercase variants.
 
  [4mASCII 1963 (7-bit)[24m
   [33m_0123456789ABCDEF[m
@@ -34,7 +54,7 @@ The first ASCII standard from 1963 only included uppercase letters and left
 Many early computers didn't have enough RAM to provide a graphics mode where
 individual pixels could be controlled. They were limited to displaying text.
 Since most early home computers were 8-bit systems, their designers quickly
-realized they could add an extra 128 characters from 0x80 to 0xFF to provide
+realized they could add an extra 128 characters, 0x80 to 0xFF, to provide
 international alphabets and semigraphics, allowing for rudimentary graphics.
 
 For example, the Commodore PETSCII (PET, C=64, …) was based on ASCII 1963:
@@ -43,10 +63,10 @@ For example, the Commodore PETSCII (PET, C=64, …) was based on ASCII 1963:
   [33m_0123456789ABCDEF     _0123456789ABCDEF[m
  [33m0_[100;30;3mPETSCII-specific[m    [33m0_[100;30;3mPETSCII-specific[m
  [33m1_[100;30;3m control chars  [m    [33m1_[100;30;3m control chars  [m
- [33m2_[m !"#$%&'()*+,-./    [33m2_[90m !"#$%&'()*+,-./[m
- [33m3_[m0123456789:;<=>?    [33m3_[90m0123456789:;<=>?[m
- [33m4_[m@ABCDEFGHIJKLMNO    [33m4_[90m@[mabcdefghijklmno
- [33m5_[mPQRSTUVWXYZ[£]↑←    [33m5_[mpqrstuvwxyz[90m[£]↑←[m
+ [33m2_[90m !"#$%&'()*+,-./    [33m2_[90m !"#$%&'()*+,-./[m
+ [33m3_[90m0123456789:;<=>?    [33m3_[90m0123456789:;<=>?[m
+ [33m4_[90m@ABCDEFGHIJKLMNO    [33m4_[90m@[mabcdefghijklmno
+ [33m5_[90mPQRSTUVWXYZ[[m£[90m]↑←    [33m5_[mpqrstuvwxyz[90m[£]↑←[m
  [33m6_[m🭹♠🭲🭸🭷🭶🭺🭱🭴╮╰╯🭼╲╱🭽    [33m6_[90m🭹[mABCDEFGHIJKLMNO
  [33m7_[m🭾●🭻♥🭰╭╳○♣🭵♦┼🮌│π◥    [33m7_[mPQRSTUVWXYZ[90m┼🮌│[m🮖🮘
  [33m8_[100;30;3mRepeat of 00-1F [m    [33m8_[100;30;3mRepeat of 00-1F [m
@@ -165,10 +185,11 @@ tabular data more than game sprites and tiles.
  [33m6_[90m`abcdefghijklmno[m
  [33m7_[90mpqrstuvwxyz{[m¦[90m}~[m⌂
 
-While the top half was identical in all markets, the original US-centric
-extras designed for the US didn't support other western countries. It was
-redesigned for each target market and lost some box drawing pieces to allow
-for more alphabetic letters to accomodate specific regions and languages.
+While the low half is based on ASCII 1967 and identical in all markets
+(except for DOS/V), the original US-centric high half designed for the US
+didn't support other western countries. It was redesigned for each target
+market and lost some box drawing pieces to allow for more alphabetic letters
+to accomodate specific regions and languages.
 
  [4mDOS 437: IBM-PC/US[24m    [4mDOS 850: Latin 1[24m
   [33m_0123456789ABCDEF     _0123456789ABCDEF[m
@@ -265,7 +286,7 @@ The ISO Latin 1 character set is designed to handle most western languages,
 and Microsoft extended it, adding some missing punctuation and letters in
 place of the C1 control characters, as was done earlier with the C0 control
 characters. These two code pages are very closely linked, so much that Web
-pages that declare ISO Latin 1 are in fact assumed to be Windows 1252.
+pages that claim to be ISO Latin 1 are in fact assumed to be Windows 1252.
 
  [4mISO 8859-1:Latin 1[24m    [4mWin 1252: Latin 1[24m
   [33m_0123456789ABCDEF     _0123456789ABCDEF[m
@@ -501,7 +522,7 @@ to be used only as following bytes of multi-byte values.
  [33mC_[100;30m␥␥[44;39;3m  2-byte      [m ╶╮
  [33mD_[44;39;3m     leading    [m  ├╴ Leading bytes
  [33mE_[45;39;3m 3-byte leading [m  │  (of multi-byte sequence)
- [33mF_[46;39;3m4-b l[0;100;30m␥␥␥␥␥␥␥␥␥␥␥[m ╶╯
+ [33mF_[46;39;3m 4-by[100;30mte leading [m ╶╯
 
 This clever arrangement can represent all Unicode code points (U+0000 to
 U+10FFFF), never confuse applications and libraries expecting plain ASCII,
