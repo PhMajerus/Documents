@@ -276,6 +276,43 @@ hardware improvements before they will be able to support more Kanji.
  [33mE_[90mαßΓπΣσµτΦΘΩδ∞⌀∈∩    [33mE_[mたちつてとなにぬねのはひふへほま
  [33mF_[90m≡±≥≤⌠⌡÷≈°∙·√ⁿ²■█    [33mF_[mみむめもやゆよらりるれろわん[100;30m␥ [0;90m██[m
 
+All these code pages were still 8-bit each. A system like MS-DOS could change
+the code page dynamically by loading another character set into memory, but
+an app would be limited to a single character set of 256 glyphs at most.
+
+This still would not allow to mix languages on the same screen. Some users
+needed more symbols to represent mathematical concepts, or mix languages.
+Some terminals such as DEC and HP allowed the user to install several
+characters ROMs, and switch between them using in-band commands (VT escape
+sequences). All the ROMs would contain the same numerical values for their
+characters, so plain text could not mix them, but the terminal would keep
+track of the character set in use and store the ROM index along the character
+value for each cell of the screen, allowing a single screen to mix characters
+from several ROMs. DEC VT terminals even allowed apps to load custom
+characters in RAM, making it possible to define their own alternate character
+sets.
+
+For example, here are the character ROMs for the HP 2640 Series terminals.
+It stored 64 characters per ROM, so the base characters based on ASCII 1967
+was split over two ROMs, and alternate character set ROMs would only contain
+alternates for the characters 0x20 to 0x5F.
+
+ [4mRoman Uppercase[24m       [4mMath character set[24m    [4mLine Microvector set[24m
+  [33m_0123456789ABCDEF     _0123456789ABCDEF     _0123456789ABCDEF[m
+ [33m2_[90m !"#$%&'()*+,-./[m    [33m2_[m √│§∇±∝⌠÷≃ΠΓΨ≡ΦΞ    [33m2_[m ┠┨┯┷╟╢╤╧║╂┿─𜸗│┼
+ [33m3_[90m0123456789:;<=>?[m    [33m3_[m⁰¹²³⁴⁵⁶⁷⁸⁹ΩΛ∞⌡☨Σ    [33m3_[m╋┣┫┳┻├┤┬┴═┃━╫𜸖╪╬
+ [33m4_[90m@ABCDEFGHIJKLMNO[m    [33m4_[m¶αβψφε∂ληιΘκωμνρ    [33m4_[m╞┗╉█🯎🯏└┘𜸏𜸔𜸐𜸑𜸒╇╈𜸕
+ [33m5_[90mPQRSTUVWXYZ[\]^_[m    [33m5_[mπγθστξΔδχυζ↑→Υ←↓    [33m5_[m𜸙┏┌┛┐┤╊┓▅𜸘▃╡𜸍╨𜸎╥
+
+ [4mRoman Lowercase[24m      [4mLarge Character set[24m   The large character was
+  [33m_0123456789ABCDEF     _0123456789ABCDEF[m   designed to build large
+ [33m0_[90m␀␁␂␃␄␅␆[m🕭[90m␈␉␊␋␌␍␎␏[m    [33m2_[m 𜸚𜸛𜸜𜸝𜸞𜸟𜸠𜸡𜸢𜸣𜸤𜸥𜸦𜸧𜸨   characters like these:
+ [33m1_[90m␐␑␒␓␔␕␖␗␘␙␚␛␜␝␞␟[m    [33m3_[m𜸩𜸪𜸫𜸬𜸭𜸮𜸯𜸰𜸫𜸱𜸲𜸳𜸴▚𜸵𜸶   𜸚𜸟𜸤𜸛𜸟𜸤𜸚𜸟𜸤 𜸦 𜸚𜸟𜸤𜸚𜸟𜸤
+ [33m6_[90m`abcdefghijklmno[m    [33m4_[m𜸷𜸸𜸹𜸺𜸻𜸼𜸽𜸾𜸿𜹀𜹁𜹂𜹃𜹄𜹅𜹆   𜸨𜸟𜸶𜸨𜸟𜸷𜸩   𜸩 𜸚𜸟𜹃 𜸟𜸷
+ [33m7_[90mpqrstuvwxyz{|}~[m␨    [33m5_[m𜹇𜹈𜹉𜹊𜹋𜹌𜹍𜹎𜹏𜹐▘▝▖▗▀▌   𜸼 𜸼𜸽𜸟𜹃𜸾𜸟𜹃 𜸼 𜸽𜸟𜸥𜸾𜸟𜹃
+
+They also supported purpose-specific character ROMs, such as 3 ROMs for APL.
+
 When systems capable of graphics appeared, semigraphics became useless.
 It was much better to draw tables and game graphics using the graphics modes
 and to use the text encoding to represent as many characters as possible.
@@ -304,9 +341,15 @@ simultaneously, the "OEM" code pages for text-mode (CUI) applications with
 their semigraphics from the IBM PC and MS-DOS days, and "ANSI" code pages for
 GUI applications.
 
-All these code pages were still 8-bit each. A system like MS-DOS could change
-the code page dynamically by loading another character set into memory, but
-an app would be limited to a single character set of 256 glyphs at most.
+Just like some terminals supported displaying several character sets on a
+single screen, GUI systems usually allowed apps to select the font to use
+for each text draw call. This allowed to mix languages on screen, or even
+design fonts specifically to provide symbols to be used alongside normal
+text. For example, the Windows Wingdings fonts simply reuse the same 224
+printable character values to privide symbols. While this worked, it still
+required the app to carefully select its fonts, and these alternate character
+sets would not work for text interchange as the characters from different
+sets used the same values.
 
 This was not enough for the asian market, and Japan with leading hardware
 manufacturers wanted to support their local market properly.
@@ -547,5 +590,5 @@ handle the two possible arrangements of UTF-16 as UTF-16BE and UTF-16LE.
 This makes UTF-8 the ideal choice for cross-systems storage and transmission.
 
 
-[2;3m]8;;http://www.phm.lu/Philippe Majerus]8;;, July 2021, last updated March 31, 2025 [22;23m
+[2;3m]8;;http://www.phm.lu/Philippe Majerus]8;;, July 2021, last updated June 23, 2025 [22;23m
 
