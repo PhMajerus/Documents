@@ -11,7 +11,7 @@
 This document contains legacy computers character sets, those will display
 properly only if you use a font that contains most of the Symbols for Legacy
 Computing and Supplement blocks from Unicode 16.0 and many legacy characters.
-I made sure that ]8;;https://github.com/slavfox/Cozette/Cozette]8;; 1.29.0 supports all of them, you can use it as it, or
+I made sure that ]8;;https://github.com/the-moonwitch/Cozette/Cozette]8;; 1.29.0 supports all of them, you can use it as it, or
 as a fallback with another font of your choice for the missing characters.
 
 This document does not cover Baudot Code, BCDIC, and EBCDIC because while

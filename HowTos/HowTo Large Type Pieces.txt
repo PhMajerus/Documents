@@ -41,7 +41,7 @@ The only requirement is to use a font that includes those characters.
 To display properly, you need a font with support for large type pieces.
 For example:
  • ]8;;https://github.com/microsoft/cascadia-code/Microsoft Cascadia]8;; 2404.23
- • ]8;;https://github.com/slavfox/Cozette/Cozette]8;; 1.27.0
+ • ]8;;https://github.com/the-moonwitch/Cozette/Cozette]8;; 1.27.0
  • ]8;;https://github.com/be5invis/Iosevka/Iosevka]8;; 29.0.0
  • ]8;;https://unifoundry.com/unifont/Unifont]8;; 16.0.01 (requires Unifont Upper)
 
