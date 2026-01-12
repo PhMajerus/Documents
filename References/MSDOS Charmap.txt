@@ -1,10 +1,11 @@
 IBM PC and MS-DOS character sets
 --------------------------------
 
-This file does not contain the Japanese CP932 "Shift-JIS" character set
-because it is a multibyte character set with 7518 code points instead of 256.
-The complete CP932 documentation is available in a separate
-"CP932 Charmap.txt" file.
+This file does not contain the full Japanese CP932 "Shift-JIS" and Korean
+CP949 "Wansung extended" character sets because they are multibyte character
+sets. CP932 contains 7518 code points instead of 256, CP949 is even larger.
+The complete CP932 and CP949 documentation are available in a separate
+"CP932 Charmap.txt" and "CP949 Charmap.txt" files.
 
 
  [4mASCII (7-bit)[24m         [4mIBM PC graphical characters[24m
@@ -59,5 +60,5 @@ The complete CP932 documentation is available in a separate
   [90;3mThe DOS 932 codepage also replaces ASCII 5C [23m\[3m with [23m¥[3m and 7E [23m~[3m with [23m‾[3m.[m
 
 
-[2;3m]8;;http://www.phm.lu/ Philippe Majerus]8;; , July 2021, last updated March 8, 2025[22;23m
+[2;3m]8;;http://www.phm.lu/ Philippe Majerus]8;; , July 2021, last updated January 12, 2026 [22;23m
 
