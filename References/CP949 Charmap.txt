@@ -1554,3 +1554,5 @@ Double-byte
 
 
 Also, 0xC9A1 - 0xC9FE (Row 41) and 0xFEA1 - 0xFEFE (Row 94) are EUDC (End-User Defined Characters) and map to Unicode PUA characters.
+
+Also see the CP51949 Charmap for the legacy MS-DOS CP949.
